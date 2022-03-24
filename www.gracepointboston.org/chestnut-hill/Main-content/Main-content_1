@@ -1,0 +1,141 @@
+<style>
+.Main.Main--page {
+  margin: auto;
+  max-width: 1400px;
+  padding: 0px 40px;
+}
+
+.medium-button-style-outline .sqs-block-button .sqs-block-button-element--medium {
+  color: #000;
+  border-color: #000;
+}
+.medium-button-style-outline .sqs-block-button .sqs-block-button-element--medium:hover {
+  color: #fff;
+  border-color: #fff;
+  background-color: #000;
+  transition: 0.5s;
+}
+.see-more-mentors {
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+.see-more-mentors .see-less {
+  display: none;
+}
+
+.mentor-portrait {
+  float:left;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.mentor-margin-top {
+  height: 12px;
+}
+.mentor-specialty {
+  font-size: larger;
+}
+.mentor-info {
+  font-size: smaller;
+  text-align: left;
+  line-height: 1.4em;
+  margin-left: 120px;
+}
+.mentor-education-involvement {
+  font-style: italic;
+}
+.mentor-involvement {
+  font-style: italic;
+  font-size: smaller;
+}
+@media screen and (max-width: 1100px) {
+  .mentor-margin-top {
+    height: 0px;
+  }
+}
+.coded-link {
+  color: #d88518;
+  border-bottom: 1px solid rgba(216, 133, 24, 0.3);
+}
+.a2a_footnote {
+  margin-top: -30px;
+}
+.college-connect {
+  font-size: smaller;
+  font-style: italic;
+}
+  
+.a2a-track-portrait {
+  float:left;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.a2a-track-margin-top {
+  height: 12px;
+}
+.a2a-track-title {
+  font-family: Lato;
+  font-size: 29px;
+  text-transform: uppercase;
+}
+.a2a-track-info {
+  text-align: left;
+  line-height: 1.4em;
+  margin-top: 20px;
+  margin-left: 120px;
+  font-family: Raleway;
+  font-weight: 300;
+  font-size: 16px;
+  color: #0a0a0a;
+}
+.a2a-track-section-title {
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (min-width: 1100px) {
+  .a2a-track-hr {
+    margin-top: 40px;
+    color: #fff !important;
+    background-color: #fff !important;
+  }
+  .a2a-track-section-intro {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .a2a-track-hr {
+    display: none;
+  }
+  .a2a-track-title {
+    font-size: 22px;
+  }
+  .a2a-track-portrait {
+    margin-left: -20px;
+    margin-right: -5px;
+  }
+  .a2a-track-info {
+    margin-left: 75px;
+  }
+  .a2a-track-section-title {
+    font-size: 26px;
+  }
+}
+.linkedin-link img {
+  padding-right: 5px;
+}
+
+#page {
+  padding-top: 20px !important;
+}
+@media only screen and (max-width: 640px) {
+  .sqs-layout .sqs-row .sqs-block-code.sqs-block:first-child {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+}
+.sqs-layout .sqs-row .sqs-block-button.sqs-block:first-child {
+  padding-top: 0px !important;
+}
+</style>

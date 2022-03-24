@@ -1,0 +1,37 @@
+<style>
+  #instagram-reel .sqs-block-html {
+    padding: 0px;
+  }
+  #instagram-reel .thumb-image {
+    transition: 0.5s;
+  }
+  #instagram-reel .sqs-gallery-design-grid-slide a:hover .thumb-image {
+    filter: brightness(40%) blur(2px);
+  }
+  #instagram-reel .instagram-title {
+    position: absolute;
+    bottom: 10px;
+    padding: 10px;
+
+    max-height: 2.5em;
+    overflow: hidden;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: max-height 0.3s;
+    z-index: 999;
+  }
+  #instagram-reel .sqs-gallery-design-grid-slide a:hover .instagram-title {
+    max-height: 315px;
+  }
+  @media only screen and (max-width: 1050px) {
+    #instagram-reel .sqs-gallery-design-grid-slide a:hover .thumb-image {
+      filter: unset;
+    }
+    #instagram-reel .instagram-title {
+      display: none !important;
+    }
+  }
+</style></style>

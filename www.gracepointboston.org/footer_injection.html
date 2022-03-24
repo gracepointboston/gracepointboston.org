@@ -1,0 +1,178 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://static1.squarespace.com/static/61155c2fb2bbd80f6edb2541/t/613241b7b82a2a1f1e852d34/1630683575498/parallax.min.js"></script>
+
+<script>
+function initSite() {
+  function initInstagramBlocks() {
+    if ($("#instagram-reel .thumb-image.loaded").length != $(".instagram-title").length) {
+      $(".instagram-title").remove();
+      $("#instagram-reel .thumb-image.loaded").parent().each(function() {
+        $(this).prepend("<div class=\"instagram-title\">" + $(this).find(".thumb-image").attr("alt").replace(/\&.?.?.?.?.?$/, "").replace(/ +$/, "") + " ... </div>");
+      });
+    }
+  }
+
+  if (document.readyState === 'complete') {
+    var url = window.location.href;
+    url = url.replace(/.*gracepointboston.org\/?/, "");
+    url = url.replace(/.*gracepointboston.squarespace.com\/?/, "");
+    url = url.replace(/^home\/?/, "");
+    url = url.replace(/#.*$/, "");
+
+    //////////////////////////////////////////////////////////
+    // CUSTOM-1: Random Youtube video!
+    //////////////////////////////////////////////////////////
+    var randYoutube = document.getElementsByClassName("404_gpboston_youtube");
+    if (randYoutube.length > 0) {
+      var videoList = ["A7t6W_d5wV4", // welcome to Gracepoint Boston
+                      ];
+      randYoutube[0].setAttribute("src", "https://www.youtube.com/embed/" + videoList[Math.floor(Math.random() * videoList.length)] + "?rel=0");
+    }
+
+    //////////////////////////////////////////////////////////
+    // CUSTOM-2: Create a dropdown that can control the campus teams summary block
+    //////////////////////////////////////////////////////////
+    if (url == "") { // Home Page
+      dropdownItems = document.getElementsByClassName("archive-group");
+      for (let optionIndex = 0; optionIndex < dropdownItems.length; optionIndex += 1) {
+        let dropdownItem = dropdownItems[optionIndex];
+        dropdownItem.addEventListener("click", function() {
+          document.getElementsByClassName("archive-block-setting-layout-dropdown")[0].removeAttribute("open");
+          let pageWidth = $(document).width();
+
+          let selectedCampus = this.textContent.trim();
+          if (selectedCampus == "Other") {
+            window.open("/connect", "_blank");
+          } else {
+            let dropdown = this.parentElement.parentElement;
+            let blurbDiv = dropdown.parentElement.parentElement.parentElement.parentElement;
+            let rowDiv = blurbDiv.parentElement.parentElement.parentElement;
+            let campuses = rowDiv.nextSibling.getElementsByClassName("summary-item");
+            for (let campusIndex = 0; campusIndex < campuses.length; campusIndex += 1) {
+              let campus = campuses[campusIndex];
+              let campusData = campus.getElementsByClassName("summary-metadata-item")[0];
+              let campusName = campusData.textContent;
+              if (campusName.includes(selectedCampus)) {
+                let slideWidth = parseInt($(".sqs-gallery-design-carousel-slide").first().css("margin-right").replace("px", "")) + $(".sqs-gallery-design-carousel-slide").first().width();
+                let itemsPerPage = Math.floor($(".sqs-gallery-design-carousel").width() / slideWidth);
+                let newPos = Math.floor(campusIndex / itemsPerPage) * itemsPerPage * slideWidth;
+                $(".summary-item-list.sqs-gallery-design-carousel").animate({scrollLeft: newPos }, 400);
+                campus.style.backgroundColor = "#fffbdb";
+              
+                let campusPageURL = campus.getAttribute("data-click-through-url");
+                // window.open(campusPageURL, "_blank");
+              } else {
+                campus.style.backgroundColor = "white"
+              }
+            }
+          }
+        });
+      }
+    }
+    //////////////////////////////////////////////////////////
+    // CUSTOM-6: Fixing the instagram blocks
+    //////////////////////////////////////////////////////////
+    if (url == "") { // Home Page
+      initInstagramBlocks();
+    }
+
+  }
+  
+  //////////////////////////////////////////////////////////
+  // Fix the navigation folder links
+  //////////////////////////////////////////////////////////
+  $('.Header-nav-folder-title[href="/navigation-resources"]').attr("target", "_blank");
+  $('.Header-nav-folder-title[href="/navigation-resources"]').attr("href", "https://www.gracepointonline.org/gp-resources");
+  $('.Header-nav-folder-title[href="/navigation-stories"]').attr("href", "stories");
+  
+  //////////////////////////////////////////////////////////
+  // Make top bar adjust to scrolling
+  //////////////////////////////////////////////////////////
+  function adjustNavbarOnScroll() {
+    var headerLimit = topSection.height() + $(".sqs-announcement-bar").height() - navBar.height() - 10;
+    for (const i of ["center", "h1", "h2" ,"h3", "h4", "p", "span"]) {
+      if (topSection.find(i).length > 0) {
+        var textTop = topSection.find(i).offset().top - navBar.height() - 10;
+        if (textTop < headerLimit) {
+          headerLimit = textTop;
+        }
+      }
+    }
+
+    if (!isNaN(headerLimit)) {
+      if ($(window).scrollTop() < headerLimit) { // If scrolled past overlay image
+        navBar.removeClass("filled-in");
+      } else { // Above the overlay image shape
+        navBar.addClass("filled-in");
+      }
+    }
+  }
+  function adjustSocialMediaBlocksOnScroll() {
+    let screenBottom = $(window).scrollTop() + $(window).height();
+    let stickHeight = $(".Footer-middle .sqs-layout").offset().top + 20 + 2 + 5 + $(".sqs-svg-icon--list").height() + 2 + 20; // Bottom of the screen must equal TOP of the sqs-layout + padding at the top of the sqs-layout (20px) + border above social media buttons + padding above the social media buttons + height of the social media buttons + border below social media buttons + margin below social media buttons
+    if (screenBottom >= stickHeight) {
+      $(".Footer-middle .sqs-svg-icon--list").removeClass("fixed");
+    } else {
+      $(".Footer-middle .sqs-svg-icon--list").addClass("fixed");
+    }
+  }
+
+  if ($(window).width() > 640) { // If not mobile (on desktop)
+    var navBar = $(".Header--top");
+    var topSection = null;
+    if ($("main.Index").length > 0) {
+      topSection = $("main section").first();
+    }
+    if (topSection != null) { // If page has overlay header
+      window.onscroll = function() {
+        adjustNavbarOnScroll();
+        adjustSocialMediaBlocksOnScroll();
+        initInstagramBlocks();
+      };
+      adjustNavbarOnScroll();
+      adjustSocialMediaBlocksOnScroll();
+    } else {
+      navBar.addClass("filled-in");
+      $(".Content-outer").css("margin-top", "75px");
+      window.onscroll = function() {
+        adjustSocialMediaBlocksOnScroll();
+        initInstagramBlocks();
+      };
+    }
+  }
+  
+  //////////////////////////////////////////////////////////
+  // CUSTOM-4: Summary block arrows should properly page items
+  //////////////////////////////////////////////////////////
+  summaryControls = $(".sqs-gallery-controls").children();
+  for (let controlIndex = 0; controlIndex < summaryControls.length; controlIndex += 1) {
+    let control = summaryControls[controlIndex];
+    $(control).replaceWith($(control).clone()); // Delete old ones so we don't get default behavior
+  }
+  $(".summary-carousel-pager-prev").on("click", function(e) {
+    let slideWidth = parseInt($(".sqs-gallery-design-carousel-slide").first().css("margin-right").replace("px", "")) + $(".sqs-gallery-design-carousel-slide").first().width();
+    let itemsPerPage = Math.floor($(".sqs-gallery-design-carousel").width() / slideWidth);
+    let curPos = $(".summary-item-list.sqs-gallery-design-carousel").scrollLeft() - 10;
+    let newPos = Math.floor(((curPos / slideWidth) / itemsPerPage).toFixed(3)) * itemsPerPage * slideWidth;
+    $(".summary-item-list.sqs-gallery-design-carousel").animate({scrollLeft: newPos }, 400);
+  });
+  $(".summary-carousel-pager-next").on("click", function(e) {
+    let slideWidth = parseInt($(".sqs-gallery-design-carousel-slide").first().css("margin-right").replace("px", "")) + $(".sqs-gallery-design-carousel-slide").first().width();
+    let itemsPerPage = Math.floor($(".sqs-gallery-design-carousel").width() / slideWidth);
+    let curPos = $(".summary-item-list.sqs-gallery-design-carousel").scrollLeft() + 10;
+    let newPos = (Math.floor(((curPos / slideWidth) / itemsPerPage).toFixed(2)) + 1) * itemsPerPage * slideWidth;
+    $(".summary-item-list.sqs-gallery-design-carousel").animate({scrollLeft: newPos }, 400);
+  });
+  
+  //////////////////////////////////////////////////////////
+  // CUSTOM-5: Set background for the whole website
+  //////////////////////////////////////////////////////////
+  $(".Site.loaded").parallax({imageSrc: "https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1630646933476-84R93Q1HLMN9S7QLB17A/image-asset.jpeg", position: "0px 0px", speed: 0.4});
+
+}
+
+document.onreadystatechange = () => {
+  initSite();
+};
+  
+</script>

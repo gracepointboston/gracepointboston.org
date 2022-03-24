@@ -1,0 +1,10 @@
+<style>
+  .footer-bottom--content {
+    max-width: 1140px;
+    margin: auto;
+    text-align: right;
+  }
+</style>
+<div class="footer-bottom--content">
+  © 2022 Gracepoint Ministries. All rights reserved. <a href="https://www.gracepointonline.org/terms-of-use" target="_blank">Terms of Use.</a>
+</div>

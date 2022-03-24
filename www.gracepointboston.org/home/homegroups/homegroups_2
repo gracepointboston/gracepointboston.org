@@ -1,0 +1,80 @@
+<center>
+  <h2>Homegroups</h2>
+  <h5>
+    Homegroup is a home away from home for college students to grow in faith and develop lifelong relationships. Whether you’re a Christian looking to connect and grow, or just checking out Christianity for the first time, we invite you to join us!
+  </h5>
+</center>
+<center>
+  <div class="sqs-block archive-block sqs-block-archive">
+    <div class="sqs-block-content">
+      <details class="archive-block-wrapper archive-block-setting-layout-dropdown archive-block-setting-text-alignment-left archive-block-setting-multicolumns">
+        <summary class="archive-dropdown-toggle-label">
+          <span class="archive-dropdown-toggle-title">What's your campus?</span>
+          <span class="archive-dropdown-toggle-icon" aria-hidden="true"></span>
+        </summary>
+        <ul class="archive-group-list">
+          <li class="archive-group">
+            <span class="archive-group-name-link">
+              Babson College
+            </span>
+          </li>
+          <li class="archive-group">
+            <span class="archive-group-name-link">
+              Bentley University
+            </span>
+          </li>
+          <li class="archive-group">
+            <span class="archive-group-name-link">
+              Boston College
+            </span>
+          </li>
+          <li class="archive-group">
+            <span class="archive-group-name-link">
+              Boston University
+            </span>
+          </li>
+          <li class="archive-group">
+            <span class="archive-group-name-link">
+              Brandeis University
+            </span>
+          </li>
+          <li class="archive-group">
+            <span class="archive-group-name-link">
+              Gordon College
+            </span>
+          </li>
+          <li class="archive-group">
+            <span class="archive-group-name-link">
+              Harvard University
+            </span>
+          </li>
+          <li class="archive-group">
+            <span class="archive-group-name-link">
+              MIT
+            </span>
+          </li>
+          <li class="archive-group">
+            <span class="archive-group-name-link">
+              Northeastern University
+            </span>
+          </li>
+          <li class="archive-group">
+            <span class="archive-group-name-link">
+              Tufts University
+            </span>
+          </li>
+          <li class="archive-group">
+            <span class="archive-group-name-link">
+              Wellesley College
+            </span>
+          </li>
+          <li class="archive-group">
+            <span class="archive-group-name-link">
+              Other
+            </span>
+          </li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</center></div></center></div>

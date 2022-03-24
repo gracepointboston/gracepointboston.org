@@ -1,0 +1,65 @@
+<style>
+#welcome-banner {
+  min-height: 100vh;
+}
+.header-banner-top-spacing {
+  height: calc(55vh - 250px);
+}
+.header-banner {
+  margin-bottom: 50px;
+}
+.thin-title-line {
+  line-height: 0.8em;
+}
+.homepage-title-underline {
+  max-width: 39em !important;
+}
+
+#welcome-banner h1, #welcome-banner h3 {
+  color: white;
+  margin: 0px;
+}
+#welcome-banner .sqs-block-code {
+  padding-bottom: 0px;
+}
+
+#welcome-banner .sqs-block-button-element {
+  color: white;
+}
+#welcome-banner .sqs-block-button-element:hover {
+  color: black;
+}
+
+#welcome-banner .sqs-block-button-element--medium {
+  background-color: #386a6d;
+  border: none;
+}
+#welcome-banner .sqs-block-button-element--medium:hover {
+  background-color: #FFFFFF;
+}
+
+@media only screen and (max-width: 640px) {
+  #welcome-banner {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1637708043412-8VQ2WVCXL9S3Q7KT2M7E/Denby_Hangout_and_Laughter.png?format=2500w");
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 50px);
+  }
+  .normal-title-line {
+    line-height: 1.5em;
+  }
+  .thin-title-line {
+    line-height: 0.4em;
+  }
+  .homepage-title-underline {
+    max-width: 21em !important;
+  }
+}
+</style>
+<div class="header-banner-top-spacing"></div>
+<center class="header-banner">
+  <h1 class="thin-title-line">Welcome to</h1>
+  <h1>Gracepoint Boston</h1>
+</center>
+<br>
+</div></div>

@@ -1,0 +1,16 @@
+<style>
+  #leadership .sqs-row .sqs-row {
+    max-width: 1000px;
+    margin: auto;
+  }
+  #leadership .sqs-block-image .design-layout-card:not(.sqs-narrow-width) {
+    display: block;
+    justify-content: unset;
+  }
+  #leadership .sqs-block-image .design-layout-card:not(.sqs-narrow-width)>:first-child {
+    width: unset;
+  }
+  #leadership .sqs-block-image .design-layout-card:not(.sqs-narrow-width) .image-card-wrapper {
+    width: unset;
+  }
+</style></style>

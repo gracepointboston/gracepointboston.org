@@ -1,0 +1,42 @@
+<style>
+  #rides-to-church {
+    margin: auto;
+    max-width: 1250px;
+  }
+  #rides-to-church h2 {
+    margin-left: 60px;
+  }
+  #rides-to-church .sqs-gallery-design-carousel .sqs-gallery-controls .previous, .sqs-gallery-design-carousel .sqs-gallery-controls .next {
+    margin-top: 9em;
+  }
+  #rides-to-church .sqs-gallery-design-carousel .sqs-gallery-controls .previous {
+    margin-right: calc(100% - 90px);
+  }
+
+  #rides-to-church .summary-item {
+    width: calc(25% - 10px) !important;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+
+  @media only screen and (max-width: 1150px) {
+    #rides-to-church .sqs-gallery-design-carousel .sqs-gallery-controls .previous {
+      margin-right: calc(100% - 55px);
+    }
+  }
+  @media screen and (max-width:1250px) {
+    #rides-to-church .summary-item {
+      width: calc(33% - 7px) !important;
+    }
+  }
+  @media screen and (max-width:900px) {
+    #rides-to-church .summary-item {
+      width: calc(50% - 10px) !important;
+    }
+  }
+  @media screen and (max-width:640px) {
+    #rides-to-church .summary-item {
+      width: calc(100% - 10px) !important;
+    }
+  }
+</style>

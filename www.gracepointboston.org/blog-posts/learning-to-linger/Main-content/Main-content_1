@@ -1,0 +1,37 @@
+<div class="portrait-description">
+Hannah Olmstead (c/o 2021) graduated from the University of North Carolina at Chapel Hill with a double major in Economics and Public Policy. Has been compared to: Hermione Granger and The Wicked Witch of the West.
+</div>
+
+<div class="gracepoint-boston-links">
+  <h3>
+    Want to see more from Gracepoint Boston?
+  </h3>
+  <ul>
+    <li><a href="/blog">More blog posts!</a></li>
+    <li>Like us on <a href="https://www.facebook.com/gracepoint.boston/">Facebook</a></li>
+    <li>Follow us on <a href="https://www.instagram.com/gracepoint.boston/">Instagram</a></li>
+    <li>Check out our <a href="/">Gracepoint Boston website</a></li>
+  </ul>
+</div>
+<style>
+.portrait {
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+
+  float: left;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.portrait-description {
+  padding-top: 15px;
+}
+
+.gracepoint-boston-links {
+  margin-top: 50px;
+}
+.gracepoint-boston-links a {
+  color: #ffaa00;
+}
+</style></style>

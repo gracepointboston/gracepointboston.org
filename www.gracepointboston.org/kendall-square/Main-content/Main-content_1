@@ -1,0 +1,23 @@
+<style>
+  .sqs-block-image-figure.design-layout-card {
+    background: white;
+    border-radius: 8px !important;
+  }
+  .sqs-block-image .design-layout-card .intrinsic .image-inset {
+    height: 100%;
+  }
+  .sqs-block-image .design-layout-card .intrinsic .image-inset div {
+    height: 100%;
+  }
+  .sqs-block-image .design-layout-card .intrinsic .image-inset img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .image-card-wrapper {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  } 
+</style></style>

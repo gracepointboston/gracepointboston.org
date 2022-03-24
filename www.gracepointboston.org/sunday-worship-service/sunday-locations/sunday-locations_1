@@ -1,0 +1,18 @@
+<style>
+#sunday-locations {
+  margin: auto;
+  max-width: 1140px;
+}
+/* Covid 19 Info in Sunday page */
+.sqs-block-button .sqs-block-button-element--large {
+  width: 91%;
+  background-color: #0C3832;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 0px;
+}
+  
+#sunday-locations .sqs-block-image:first-of-type {
+  display: none;
+}
+</style>

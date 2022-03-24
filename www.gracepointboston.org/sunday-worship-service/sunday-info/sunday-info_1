@@ -1,0 +1,23 @@
+<style>
+  #sunday-info {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1638302022122-O2OHPVESQS19H0EQV5OM/51413103693_2cc113a3cc_k.jpg?format=2500w");
+    background-size: cover;
+    background-position: center;
+  }
+
+  #sunday-info h1 {
+    color: white;
+  }
+  #sunday-info h3 {
+    color: white;
+  }
+  #sunday-info
+  .sqs-block-button-element--medium {
+    background-color: #386a6d;
+    border: none;
+  }
+  #sunday-info
+  .sqs-block-button-element--medium:hover {
+    background-color: #FFFFFF;
+  }
+</style></style>
