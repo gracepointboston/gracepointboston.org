@@ -13,23 +13,23 @@ html = curl_process.stdout
 ######################################################################
 # Head
 ######################################################################
-print("Processing: header.html")
+print("Processing: header_injection.html")
 head = html.split("<head>")[1].split("</head>")[0]
 head = re.sub("^[^>]*>", "", head.split("site.css")[1]) # Cut off everything before the site.css link
 head = head.split("<!--")[0] # Strip off SS-generated comment at the end of our header
 head = head.strip() + "\n"
-open(domain + "/head.html", "w").write(head)
+open(domain + "/header_injection.html", "w").write(head)
 
 ######################################################################
 # Footer
 ######################################################################
-print("Processing: footer.html")
+print("Processing: footer_injection.html")
 footer = html.split("site-bundle.js")[1]
 footer = re.sub("^[^>]*></script>", "", footer)
 footer = footer.split("text/javascript")[0]
 footer = re.sub("<script [^>]*$", "", footer)
 footer = footer.strip() + "\n"
-open(domain + "/footer.html", "w").write(footer)
+open(domain + "/footer_injection.html", "w").write(footer)
 
 ######################################################################
 # site.css

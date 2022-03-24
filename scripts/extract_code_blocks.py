@@ -10,8 +10,14 @@ def curl(url):
     html = curl_process.stdout
     return html
 
-def parse_html_for_code_blocks(html):
+def parse_html_for_code_blocks(html, process_footer=False):
     cur_section_name = None
+    if process_footer:
+        html = "<footer " + html.split("<footer ")[1]
+        cur_section_name = "footer"
+    else:
+        html = html.split("<footer ")[0]
+
     code_blocks = {}
     in_code_block = False
     code_block = ""
@@ -75,19 +81,26 @@ def parse_html_for_code_blocks(html):
                 code_block += "\n"
     return code_blocks
 
-def write_code_blocks(url, all_code_blocks):
+def get_page_url(url):
+    page_url = url.split(".org")[1]
+    if page_url == "":
+        page_url = "home"
+    else:
+        page_url = re.sub(r"^/+", "", page_url).strip()
+    return page_url
+
+def write_code_blocks(url, all_code_blocks, custom_url=None):
     if len(all_code_blocks.keys()) > 0: # Only create outside folders if there are code blocks to be written out
-        page_url = url.split(".org")[1]
-        if page_url == "":
-            page_url = "homepage"
-        else:
-            page_url = re.sub(r"^/+", "", page_url).strip()
-        page_url = "www.gracepointboston.org/" + page_url
-        os.makedirs(page_url, exist_ok=True)
-        os.chdir(page_url)
+        orig_dir = os.getcwd()
+        domain = "www.gracepointboston.org/"
+        site_dir = domain + get_page_url(url)
+        if custom_url != None:
+            site_dir = domain + custom_url
+        os.makedirs(site_dir, exist_ok=True)
+        os.chdir(site_dir)
 
         for section_name, code_blocks in all_code_blocks.items():
-            orig_dir = os.getcwd()
+            domain_dir = os.getcwd()
             os.makedirs(section_name, exist_ok=True)
             os.chdir(section_name)
 
@@ -95,14 +108,21 @@ def write_code_blocks(url, all_code_blocks):
             for code_block in code_blocks:
                 open(section_name + "_" + str(block_index), 'w').write(code_block)
                 block_index += 1
-        
-            os.chdir(orig_dir)
+
+            os.chdir(domain_dir)
+        os.chdir(orig_dir)
+
+def extract(url):
+    print("Processing: " + url)
+    html = curl(url)
+    all_code_blocks = parse_html_for_code_blocks(html, False)
+    write_code_blocks(url, all_code_blocks)
+    if (get_page_url(url) == "home"):
+        all_code_blocks = parse_html_for_code_blocks(html, True)
+        write_code_blocks(url, all_code_blocks, "")
 
 if len(sys.argv) > 1:
     url = sys.argv[1].strip()
-    print("Processing: " + url)
-    html = curl(url)
-    all_code_blocks = parse_html_for_code_blocks(html)
-    write_code_blocks(url, all_code_blocks)
+    extract(url)
 else:
     print("Usage: python extract_code_blocks.py URL_TO_PROCESS")
