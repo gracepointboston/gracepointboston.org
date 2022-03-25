@@ -3,6 +3,9 @@ all:
 	@make sync_code_blocks
 	@make sync_with_github
 
+init:
+	brew install gh python3
+
 sync_code_blocks:
 	@for url in $$(curl https://www.gracepointboston.org/sitemap.xml 2>/dev/null | grep "<loc>" | sed -re "s/<\/?loc>//g" -e "s/^ +//g" | sort | uniq); do python3 scripts/extract_code_blocks.py $${url}; done
 
