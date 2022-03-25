@@ -9,4 +9,4 @@ As we're all working on the website at the same time without built-in site-wide 
 
 This will prevent us from accidentally making surprise updates to the production website that we weren't intending on making, and then accidentally leaving them there overnight.
 
-And that's it - and so with that, let's code!
+And that's it - and so with that, let's code! :)
