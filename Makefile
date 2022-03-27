@@ -13,9 +13,9 @@ sync_site_assets:
 	@python3 scripts/extract_site_assets.py
 
 sync_with_github:
-	@git b -D review || true
-	@git co -b review
+	@git branch -D review || true
+	@git checkout -b review
 	@git add .
-	@git ci -m "Submitting latest work for review"
+	@git commit -m "Submitting latest work for review"
 	@git push --set-upstream origin review
 	@gh pr create --fill
