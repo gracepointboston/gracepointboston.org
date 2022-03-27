@@ -40,9 +40,9 @@
 
 @media only screen and (max-width: 640px) {
   #welcome-banner {
-    background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1637708043412-8VQ2WVCXL9S3Q7KT2M7E/Denby_Hangout_and_Laughter.png?format=2500w");
+    background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1648167580359-XZNB41LZ6X8NGTPVNB5N/gracepoint_boston_welcome.jpeg?format=2500w");
     background-size: cover;
-    background-position: center;
+    background-position: top;
     min-height: calc(100vh - 50px);
   }
   .normal-title-line {
