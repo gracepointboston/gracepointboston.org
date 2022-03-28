@@ -287,13 +287,6 @@ section: first-of-type .Index-page-content {
   }
   
 }
-@media screen and (max-width:660px) {
-  .Index, .Footer {
-    padding-left: 2vw;
-    padding-right: 2vw;
-  }
-  
-}
 .Footer {
   margin: auto;
 }

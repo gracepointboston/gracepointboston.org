@@ -1,10 +1,38 @@
 <style>
-  .footer-bottom--content {
-    max-width: 1140px;
-    margin: auto;
-    text-align: center;
+  .footer-menu-container {
+    display: flex;
+  }
+  .footer-about {
+    margin-left: 30px;
+  }
+  .footer-menu {
+    margin-left: 50px;
+  }
+  .footer-menu a {
+    color: #4b8680;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(75,134,128,.3);
+  }
+  .footer-menu a:hover {
+    color: rgba(75,134,128,.6);
+  }
+  @media only screen and (max-width: 640px) {
+    .footer-menu-container {
+      margin-top: 20px;
+    }
+    .footer-about {
+      margin-left: 0px;
+    }
   }
 </style>
-<div class="footer-bottom--content">
-  © 2022 Gracepoint Ministries. All rights reserved. <a href="https://www.gracepointonline.org/terms-of-use" target="_blank">Terms of Use.</a>
+<div class="footer-menu-container">
+  <div class="footer-about">
+    <strong>ABOUT</strong>
+  </div>
+  <div class="footer-menu">
+    <p><a href="https://www.gracepointonline.org/who-we-are" target="_blank">Gracepoint</a></p>
+    <p><a href="https://www.gracepointonline.org/partners" target="_blank">Partners</a></p>
+    <p><a href="https://www.gracepointonline.org/boston/give" target="_blank">Giving</a></p>
+  </div>
 </div>
