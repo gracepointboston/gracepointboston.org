@@ -2,7 +2,7 @@
   .footer-bottom--content {
     max-width: 1140px;
     margin: auto;
-    text-align: right;
+    text-align: center;
   }
 </style>
 <div class="footer-bottom--content">

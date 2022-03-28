@@ -1,6 +1,6 @@
 <style>
   #homegroups.Index-page--has-image .Index-page-content {
-    padding-top: 20px;
+    padding-top: 80px !important;
     padding-bottom: 30px;
   }
   #homegroups h2 {
