@@ -1,25 +1,9 @@
 <style>
 #connect-banner {
-  min-height: calc(100vh - 75px);
-}
-.sqs-video-background.content-fill {
-  background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1637708043412-8VQ2WVCXL9S3Q7KT2M7E/Denby_Hangout_and_Laughter.png?format=700w");
+  background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1648420873912-IE3IEVHHSDB1M4TO7C5I/jchao.jpeg?format=2500w");
   background-size: cover;
-  background-position: center;
+  background-position: 75% 20%;
 }
-.header-banner-top-spacing {
-  height: calc(50vh - 250px - 5em);
-}
-.normal-title-line {
-  line-height: 1.3em;
-}
-.thin-title-line {
-  line-height: 0.8em;
-}
-.homepage-title-underline {
-  max-width: 39em !important;
-}
-
 #connect-banner h1, #connect-banner h3 {
   color: white;
   margin: 0px;
@@ -28,28 +12,10 @@
   padding-bottom: 0px;
 }
 
-#connect-banner .sqs-block-button-element {
-  color: white;
-}
-#connect-banner .sqs-block-button-element:hover {
-  color: black;
-}
-
-@media only screen and (max-width: 640px) {
+@media only screen and (min-width: 640px) {
   #connect-banner {
-    background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1647230567577-C1INFH790PSGNPJ9VTM9/51525042852_c73f461142_k.jpg?format=2500w");
-    background-size: cover;
-    background-position: center;
-    min-height: calc(100vh - 50px);
-  }
-  .normal-title-line {
-    line-height: 1.5em;
-  }
-  .thin-title-line {
-    line-height: 0.4em;
-  }
-  .homepage-title-underline {
-    max-width: 21em !important;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
-</style></style>
+</style>

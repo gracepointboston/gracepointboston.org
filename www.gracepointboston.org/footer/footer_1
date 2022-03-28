@@ -1,4 +1,7 @@
 <style>
+  footer .Footer-middle .sqs-block-image {
+    padding-left: 0px;
+  }
   .footer-blurb {
     font-size: 14px;
     color: #777;
