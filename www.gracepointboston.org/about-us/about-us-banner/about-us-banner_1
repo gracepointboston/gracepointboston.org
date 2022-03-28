@@ -16,9 +16,15 @@
   .sqs-block-button-element--medium:hover {
     background-color: #FFFFFF;
   }
+  
   /* Poster Card Hover-overlays */
+  #our-story .image-overlay {
+    background: rgba(0,0,0,0.1);
+    transition: 0.3s background;
+    -webkit-transition: 0.3s background;
+    -moz-transition: 0.3s background;
+  }
   #our-story .image-overlay:hover {
     background: rgba(0,0,0,0.4);
-    transition: 0.3s;
   }
 </style></style>
