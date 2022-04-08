@@ -1,0 +1,46 @@
+<style>
+    #easter-header {
+        min-height: 50vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649379271517-P3ANKYCZJGQLHP12K28V/header_4.jpg?format=2500w")
+    }
+
+    .header-textbox {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-text--join {
+        margin-bottom: 0;
+        color: #81A969;
+        text-transform: uppercase;
+    }
+
+    .header-text--easter {
+        color: #304945;
+        text-transform: uppercase;
+    }
+
+    @media only screen and (min-width: 640px) {
+        #easter-header {
+            margin-top: 10vh;
+        }
+        .header-text--join {
+            font-size: 3.8vw;
+        }
+
+        .header-text--easter {
+            font-size: 4.2vw;
+        }
+    }
+</style>
+<div class="header-textbox">
+    <h1 class="header-text--join">join us for</h1>
+    <h1 class="header-text--easter">Easter Service</h1>
+</div></div>

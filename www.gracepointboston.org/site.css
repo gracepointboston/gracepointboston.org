@@ -65,10 +65,10 @@ body: not(.sqs-seven-one) .sqs-announcement-bar {
   background-color: #183936;
 }
 .Header-nav--secondary .Header-nav-item:last-of-type {
-  border: 2px solid #fff;
-  body-color: #fff;
-  padding-left: 10px !important;
-  padding-right: 10px !important;
+  background-color: #4b8781;
+  color: #fff;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
   transition: .5s;
   border-radius: 3px;
 }
@@ -302,7 +302,7 @@ section: first-of-type .Index-page-content {
 .Mobile-bar--bottom {
   display: none;
 }
-@media screen and (max-width:660px) {
+@media screen and (max-width:640px) {
   .Footer-middle .sqs-layout .sqs-row .sqs-block:last-child {
     padding-top: 0px !important;
     padding-bottom: 0px !important;
@@ -311,6 +311,9 @@ section: first-of-type .Index-page-content {
     padding-top: 0px;
   }
   .tweak-footer-layout-stacked .Footer-blocks--middle {
+    padding: 0px;
+  }
+  .socialaccountlinks-v2-block.sqs-block-socialaccountlinks-v2 {
     padding: 0px;
   }
   

@@ -1,8 +1,8 @@
 <style>
 #connect-banner {
-  background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1648420873912-IE3IEVHHSDB1M4TO7C5I/jchao.jpeg?format=2500w");
+  background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649367787342-FFFD3PUGKFAANM8LVRAL/connect_with_us.jpg?format=2000w");
   background-size: cover;
-  background-position: 75% 20%;
+  background-position: 75% 70%;
 }
 #connect-banner h1, #connect-banner h3 {
   color: white;
