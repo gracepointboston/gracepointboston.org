@@ -23,7 +23,6 @@
     #easter-content {
       min-height: calc(100vh - 50px);
       background-position: top;
-      background-size: 100vw;
     }
   }
   @media only screen and (min-width: 640px) {
@@ -72,16 +71,11 @@
     color: #bbb;
     font-weight: bold;
   }
-
-@media only screen and (min-width: 640px) {
-  #easter-content .sqs-block-summary-v2 {
-    margin-top: 90px;
-  }
   #easter-content .summary-block-collection-type-gallery .summary-heading {
     margin-bottom: 0px;
     padding: 5px 10px;
-    font-size: 2em;
     border-radius: 7px 7px 0px 0px;
+    font-size: 2em;
     text-align: center;
     background-color: #183936;
     width: calc(100% - 10px);
@@ -89,6 +83,11 @@
   #easter-content .summary-block-collection-type-gallery .summary-header-text {
     margin-left: 0px;
     color: white;
+  }
+
+@media only screen and (min-width: 640px) {
+  #easter-content .sqs-block-summary-v2 {
+    margin-top: 90px;
   }
   #easter-content .sqs-gallery-design-carousel .sqs-gallery-controls .previous, #easter-content .sqs-gallery-design-carousel .sqs-gallery-controls .next {
     margin-top: 21vh;
@@ -115,6 +114,9 @@
     #easter-content .Index-page-content {
       padding: 0px 10px 0px 20px;
     }
+    #easter-content .summary-block-collection-type-gallery .summary-heading {
+      border-radius: 3px 3px 0px 0px;
+    }
     #easter-content .sqs-gallery-design-carousel .sqs-gallery-controls .previous, #easter-content .sqs-gallery-design-carousel .sqs-gallery-controls .next {
       margin-top: 95px;
       padding: 19px 15px 19px 0px;
@@ -125,9 +127,6 @@
     }
     #easter-content .sqs-gallery-design-carousel .sqs-gallery-controls .next {
       margin-right: 8px;
-    }
-    #easter-content .summary-block-collection-type-gallery .summary-item {
-      width: calc(100% - 10px) !important;
     }
   }
   @media only screen and (max-width: 1150px) {

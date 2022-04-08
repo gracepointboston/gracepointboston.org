@@ -3,7 +3,7 @@
         min-height: 50vh;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
+        background-position: 12%;
         background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649379271517-P3ANKYCZJGQLHP12K28V/header_4.jpg?format=2500w")
     }
 

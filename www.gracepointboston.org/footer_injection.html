@@ -110,7 +110,6 @@ function initSite() {
   function adjustSocialMediaBlocksOnScroll() {
     let screenBottom = $(window).scrollTop() + $(window).height();
     let stickHeight = $(".Footer-middle .sqs-layout").offset().top + 20 + 2 + 5 + $(".sqs-svg-icon--list").height() + 2 + 20; // Bottom of the screen must equal TOP of the sqs-layout + padding at the top of the sqs-layout (20px) + border above social media buttons + padding above the social media buttons + height of the social media buttons + border below social media buttons + margin below social media buttons
-    console.log(stickHeight);
     if (screenBottom >= stickHeight) {
       $(".Footer-middle .sqs-svg-icon--list").removeClass("fixed");
     } else {
@@ -120,8 +119,9 @@ function initSite() {
 
   function easterBackgroundScrollSpy() {
     let screenHeight = $(window).height();
+    let screenWidth = $(window).width();
     let curHeight = $(window).scrollTop() + screenHeight;
-      
+
     let lifeTop = $("#easter-life").parent().parent().next().offset().top;
     let deathTop = $("#easter-death").parent().parent().next().offset().top;
     let resurrectionTop = $("#easter-resurrection").parent().parent().next().offset().top;
@@ -132,10 +132,19 @@ function initSite() {
     let startDeath = deathTop + deathHeight / 2;
     let startResurrection = resurrectionTop + resurrectionHeight / 2;
     if (curHeight < startDeath) {
+      if (screenWidth < 850) {
+        $("#easter-content").css("background-position", "top");
+      }
       $("#easter-content").css("background-image", "url(\"https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649394758006-RAFYEOUD93BLAJYYIST9/jesus_laughing.jpg?format=2500w\")");
     } else if ((curHeight > startDeath) && (curHeight < startResurrection)) {
+      if (screenWidth < 850) {
+        $("#easter-content").css("background-position", "25%");
+      }
       $("#easter-content").css("background-image", "url(\"https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649395000993-H5KOYRRKZLCK3C10FRXG/crucifix.jpg?format=2500w\")");
     } else if (curHeight >= startResurrection) {
+      if (screenWidth < 850) {
+        $("#easter-content").css("background-position", "15%");
+      }
       $("#easter-content").css("background-image", "url(\"https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649375647747-7RFD9TMD4WCADX5QWJJ5/resurrection_splash2.jpeg?format=2500w\")");
     }
   }
@@ -147,15 +156,14 @@ function initSite() {
       topSection = $("main section").first();
     }
     if (topSection != null) { // If page has overlay header
-      window.onscroll = function() {
-        console.log("test");
+      $(window).scroll(function() {
         adjustNavbarOnScroll();
         adjustSocialMediaBlocksOnScroll();
         initInstagramBlocks();
         if (url == "easter") { // Home Page
           easterBackgroundScrollSpy();
         }
-      };
+      });
       adjustNavbarOnScroll();
       adjustSocialMediaBlocksOnScroll();
       easterBackgroundScrollSpy();

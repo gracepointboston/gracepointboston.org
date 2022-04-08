@@ -3,6 +3,10 @@ all:
 	@make sync_code_blocks
 	@make sync_with_github
 
+all_no_git:
+	@make sync_site_assets
+	@make sync_code_blocks
+
 init:
 	brew install gh python3
 
