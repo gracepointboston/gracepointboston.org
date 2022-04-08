@@ -150,18 +150,24 @@ function initSite() {
     $(control).replaceWith($(control).clone()); // Delete old ones so we don't get default behavior
   }
   $(".summary-carousel-pager-prev").on("click", function(e) {
-    let slideWidth = parseInt($(".sqs-gallery-design-carousel-slide").first().css("margin-right").replace("px", "")) + $(".sqs-gallery-design-carousel-slide").first().width();
-    let itemsPerPage = Math.floor($(".sqs-gallery-design-carousel").width() / slideWidth);
-    let curPos = $(".summary-item-list.sqs-gallery-design-carousel").scrollLeft() - 10;
+    let summary = $(this).parent().parent().parent().parent().parent().parent();
+    console.log(summary[0]);
+    let slideWidth = parseInt(summary.find(".sqs-gallery-design-carousel-slide").first().css("margin-right").replace("px", "")) + summary.find(".sqs-gallery-design-carousel-slide").first().width();
+    let itemsPerPage = Math.floor(summary.find(".sqs-gallery-design-carousel").width() / slideWidth);
+    let curPos = summary.find(".summary-item-list.sqs-gallery-design-carousel").scrollLeft() - 10;
     let newPos = Math.floor(((curPos / slideWidth) / itemsPerPage).toFixed(3)) * itemsPerPage * slideWidth;
-    $(".summary-item-list.sqs-gallery-design-carousel").animate({scrollLeft: newPos }, 400);
+    summary.find(".summary-item-list.sqs-gallery-design-carousel").animate({scrollLeft: newPos }, 400);
   });
   $(".summary-carousel-pager-next").on("click", function(e) {
-    let slideWidth = parseInt($(".sqs-gallery-design-carousel-slide").first().css("margin-right").replace("px", "")) + $(".sqs-gallery-design-carousel-slide").first().width();
-    let itemsPerPage = Math.floor($(".sqs-gallery-design-carousel").width() / slideWidth);
-    let curPos = $(".summary-item-list.sqs-gallery-design-carousel").scrollLeft() + 10;
+    let summary = $(this).parent().parent().parent().parent().parent().parent();
+    console.log(summary[0]);
+    let slideWidth = parseInt(summary.find(".sqs-gallery-design-carousel-slide").first().css("margin-right").replace("px", "")) + summary.find(".sqs-gallery-design-carousel-slide").first().width();
+    let itemsPerPage = Math.floor(summary.find(".sqs-gallery-design-carousel").width() / slideWidth);
+    console.log(Math.floor(summary.find(".sqs-gallery-design-carousel").width()));
+    console.log(slideWidth);
+    let curPos = summary.find(".summary-item-list.sqs-gallery-design-carousel").scrollLeft() + 10;
     let newPos = (Math.floor(((curPos / slideWidth) / itemsPerPage).toFixed(2)) + 1) * itemsPerPage * slideWidth;
-    $(".summary-item-list.sqs-gallery-design-carousel").animate({scrollLeft: newPos }, 400);
+    summary.find(".summary-item-list.sqs-gallery-design-carousel").animate({scrollLeft: newPos }, 400);
   });
   
   //////////////////////////////////////////////////////////
@@ -169,7 +175,53 @@ function initSite() {
   //////////////////////////////////////////////////////////
   $(".Site.loaded").parallax({imageSrc: "https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1630646933476-84R93Q1HLMN9S7QLB17A/image-asset.jpeg", position: "0px 0px", speed: 0.4});
 
+  //////////////////////////////////////////////////////////
+  // EASTER Page
+  //////////////////////////////////////////////////////////
+  if (url == "easter") { // Home Page
+    $(".close-button-container").on("click", function() {
+      $("#passion-week .close-button-container").css("transition", "1.3s");
+      $("#passion-week .close-button-container").addClass("filled-in");
+      $("#passion-week .close-button-container").css("bottom", "-540px");
+      $("#passion-week .summary-block-wrapper").css("bottom", "-1000px");
+    });
+    function easterBackgroundScrollSpy() {
+      let screenHeight = $(window).height();
+      let curHeight = $(window).scrollTop() + screenHeight;
+      
+      let lifeTop = $("#easter-life").parent().parent().next().offset().top;
+      let deathTop = $("#easter-death").parent().parent().next().offset().top;
+      let resurrectionTop = $("#easter-resurrection").parent().parent().next().offset().top;
+      let lifeHeight = $("#easter-life").parent().parent().next().outerHeight(true);
+      let deathHeight = $("#easter-death").parent().parent().next().outerHeight(true);
+      let resurrectionHeight = $("#easter-resurrection").parent().parent().next().outerHeight(true);
+      let startLife = lifeTop + lifeHeight / 2;
+      let startDeath = deathTop + deathHeight / 2;
+      let startResurrection = resurrectionTop + resurrectionHeight / 2;
+      if (curHeight < startLife) {
+//        $("#easter-content").css("background-image", "url(\"https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649376818120-V157FSZ5FCUUAQD66EVO/easter_background.jpg?format=2500w\")");
+        $("#easter-content").css("background-image", "url(\"https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649375647142-GFS42T36JZEWVFS6ZF4V/jesus_laughing.jpg?format=2500w\")"); // Use life image always by default
+      } else if ((curHeight >= startLife) && (curHeight < startDeath)) {
+        $("#easter-content").css("background-image", "url(\"https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649375647142-GFS42T36JZEWVFS6ZF4V/jesus_laughing.jpg?format=2500w\")");
+      } else if ((curHeight > startDeath) && (curHeight < startResurrection)) {
+        $("#easter-content").css("background-image", "url(\"https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649375647182-1Y9UMD9KVB0KLT1F15FQ/crucifix.jpg?format=2500w\")");
+      } else if (curHeight >= startResurrection) {
+        $("#easter-content").css("background-image", "url(\"https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649375647747-7RFD9TMD4WCADX5QWJJ5/resurrection_splash2.jpeg?format=2500w\")");
+      }
+    }
+    window.onscroll = function() {
+      easterBackgroundScrollSpy();
+    };
+    easterBackgroundScrollSpy();
+  }
+
 }
+  
+   //////////////////////////////////////////////////////////
+  // CUSTOM-6: make footer middle inline
+  //////////////////////////////////////////////////////////
+  $(".socialaccountlinks-v2-block").css("display", "inline-block")
+  
 
 document.onreadystatechange = () => {
   initSite();

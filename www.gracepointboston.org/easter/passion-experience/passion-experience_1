@@ -1,0 +1,10 @@
+<style>
+  #passion-experience {
+    background-image: linear-gradient(0deg, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,.5) 100%), url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649206727920-JY5CQX94VNOJMBYZK2GY/Easter+Background.png?format=2500w");
+    background-size: cover;
+    background-position: center;
+  }
+  #passion-experience .Index-page-content {
+    max-width: 1140px;
+  }
+</style></style>

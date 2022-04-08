@@ -1,0 +1,148 @@
+<style>
+  #passion-week {
+    background-color: #dfe4e3;
+  }
+  #passion-week .sqs-block-summary-v2 .summary-item-list.sqs-gallery-design-carousel {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-bottom: 0px;
+  }
+  #passion-week .sqs-gallery-design-carousel-slide {
+    padding-bottom: 0px;
+    background: unset;
+  }
+  #passion-week .sqs-gallery-image-container {
+    margin-bottom: 0px;
+  }
+  #passion-week .sqs-block-summary-v2 {
+    padding-top: 0px;
+  }
+  #passion-week .sqs-gallery-design-carousel-slide {
+    margin-right: 10px;
+    margin-left: 0px;
+    background-color: white;
+  }
+  #passion-week .sqs-block-summary-v2 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #passion-week .summary-block-collection-type-gallery .summary-metadata-item {
+    text-transform: uppercase;
+  }
+  #passion-week .summary-block-collection-type-gallery .summary-title {
+    color: #444;
+    font-weight: bold;
+  }
+  #passion-week .summary-item.sqs-gallery-design-carousel-slide .img-wrapper {
+    padding-bottom: 60% !important;
+  }
+  #passion-week .summary-item.sqs-gallery-design-carousel-slide .img-wrapper img {
+    height: unset !important;
+  }
+  #passion-week .summary-block-collection-type-gallery .summary-excerpt a {
+    color: #bbb;
+    font-weight: bold;
+  }
+
+@media only screen and (max-width: 640px) {
+  #passion-week .Index-page-content {
+    padding: 0px 10px 0px 20px;
+  }
+  #passion-week .sqs-gallery-design-carousel .sqs-gallery-controls .previous, #passion-week .sqs-gallery-design-carousel .sqs-gallery-controls .next {
+    margin-top: 95px;
+    padding: 19px 15px 19px 0px;
+    background: unset;
+  }
+  #passion-week .sqs-gallery-design-carousel .sqs-gallery-controls .previous {
+    margin-right: calc(100% - 34px);
+  }
+  #passion-week .sqs-gallery-design-carousel .sqs-gallery-controls .next {
+    margin-right: 8px;
+  }
+  #passion-week .summary-block-collection-type-gallery .summary-item {
+    width: calc(100% - 10px) !important;
+  }
+  .close-button-container {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  #passion-week .summary-block-wrapper {
+    width: 310px;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 999;
+    transition: 1.3s;
+  }
+  #passion-week .summary-block-collection-type-gallery .summary-heading {
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding: 5px 10px;
+    background: #183936;
+    width: 300px;
+  }
+  #passion-week .summary-block-collection-type-gallery .summary-header-text {
+    margin-left: 0px;
+    color: white;
+    font-size: 18px;
+  }
+  #passion-week .sqs-gallery-design-carousel .sqs-gallery-controls .previous, #passion-week .sqs-gallery-design-carousel .sqs-gallery-controls .next {
+    margin-top: 57px;
+    padding: 19px 15px 19px 0px;
+    background: unset;
+  }
+  #passion-week .sqs-gallery-design-carousel .sqs-gallery-controls .previous {
+    margin-right: calc(100% - 32px);
+  }
+  #passion-week .sqs-gallery-design-carousel .sqs-gallery-controls .next {
+    margin-right: 4px;
+  }
+  #passion-week .sqs-gallery-design-carousel .sqs-gallery-controls .previous:before, #passion-week .sqs-gallery-design-carousel .sqs-gallery-controls .next:before {
+    font-size: 25px;
+    color: #ccc;
+  }
+  #passion-week .summary-block-collection-type-gallery .summary-item {
+    border-radius: 0px 0px 3px 3px;
+    width: calc(100% - 10px) !important;
+    height: 450px;
+  }
+  .close-button-container {
+    background-color: #1f5b1f;
+    z-index: 1000;
+    position: fixed;
+    left: 279px;
+    bottom: 460px;
+    padding: 1.5px 10px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .close-button-container:hover {
+    background-color: #d9dbd9;
+  }
+  .close-button-container:hover .close-button {
+    color: black;
+  }
+  .close-button-container.filled-in {
+    background-color: #d9dbd9;
+  }
+  .close-button-container.filled-in .close-button {
+    color: black;
+  }
+  .close-button {
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  #passion-week .sqs-gallery-design-carousel .sqs-gallery-controls .previous {
+    margin-right: calc(100% - 46px);
+  }
+}
+
+</style>
+<div class="close-button-container">
+  <i class="fas fa-times close-button"></i>
+</div></div>

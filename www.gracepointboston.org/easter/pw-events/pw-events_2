@@ -1,0 +1,112 @@
+<style>
+    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+    .flip-card {
+        background-color: transparent;
+        width: 450px;
+        height: 450px;
+        margin: 20px;
+        perspective: 1000px;
+        /* Remove this if you don't want the 3D effect */
+    }
+    @media only screen and (max-width: 1100px) {
+      .flip-card {
+        height: 350px;
+        width: 350px;
+      }
+    }
+    @media only screen and (max-width: 875px) {
+      .flip-card {
+        height: 250px;
+        width: 250px;
+      }
+    }
+    @media only screen and (max-width: 675px) {
+      .flip-card {
+        height: 210px;
+        width: 210px;
+      }
+    }
+    @media only screen and (max-width: 640px) {
+      .flip-card {
+        height: 170px;
+        width: 170px;
+      }
+    }
+
+    /* This container is needed to position the front and back side */
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    /* Position the front and back side */
+    .flip-card-front,
+    .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        /* Safari */
+        backface-visibility: hidden;
+    }
+
+
+    /* Style the back side */
+    .flip-card-back {
+        color: white;
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-back--contents {
+      margin: 20px;
+    }
+
+  .flex{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+</style>
+
+<div class="flex">
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649364135126-8RGGK1TGOC3R3OGWXVMS/front.png?format=1500w"
+                    alt="goodfriday-front">
+            </div>
+            <div class="flip-card-back">
+                <img src="https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649364471526-1XC2QVH68UDJRZ6R3EOM/gf_back.png?format=1500w"
+                    alt="goodfriday-back">
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649292832112-V0P5WFAIG0W0H1QIBE3T/Propre_Easter.png?format=750w"
+                    alt="easter-front">
+            </div>
+            <div class="flip-card-back">
+                <img src="https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649364471031-AD58H79AMBUYJLBM4OAH/easter_back.png?format=1500w"
+                    alt="easter-back">
+            </div>
+        </div>
+    </div>
+</div></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-ae7dd8c4dbc7c01a2cf2"><div class="sqs-block-content">
+
+
+<p class="" style="white-space:pre-wrap;">Along with Christians all over the world, we observe Jesus' suffering and death on the cross on Good Friday and then celebrate Easter Sunday to remember how God has made all things new through Jesus and his resurrection! We’ll be meeting at <strong>29 Denby Road, Allston, MA 02134 (</strong><a href="https://goo.gl/maps/ThH8LHtgdGgqufi86" target="_blank"><strong>click for directions</strong></a><strong>)</strong> at the dates below - hope to see you there!</p><p class="" style="white-space:pre-wrap;"><strong>Good Friday:</strong> Friday 4/15 @ 7:00 PM<br><strong>Easter: </strong>Sunday 4/17 @ 1PM</p>
+
+
+</div></div></div></div></div>
