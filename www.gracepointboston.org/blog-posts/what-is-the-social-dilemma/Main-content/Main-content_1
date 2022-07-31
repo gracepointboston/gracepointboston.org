@@ -1,0 +1,38 @@
+<style>
+  .portrait {
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+
+    float: left;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+  .portrait-description {
+    padding-top: 15px;
+  }
+
+  .gracepoint-boston-links {
+    margin-top: 50px;
+  }
+  .gracepoint-boston-links a {
+    color: #ffaa00;
+  }
+</style>
+<img class="portrait" src="https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1635268048262-R7A20OAJ38CAR01I7XEE/Isaac_Braganza.jpeg?format=200w" alt="Isaac Braganza is one of the college blogging staff writers with Gracepoint Boston">
+<div class="portrait-description">
+Isaac Braganza (c/o 2021) graduated from the University of California, Berkeley with a degree in Economics. He enjoys exercise, cleaning, and breakfast foods. He currently resides in Cambridge, MA where he serves as a mentor for students at Boston College!
+</div>
+
+<div class="gracepoint-boston-links">
+  <h3>
+    Want to see more from Gracepoint Boston?
+  </h3>
+  <ul>
+    <li><a href="/blog">More blog posts!</a></li>
+    <li>Like us on <a href="https://www.facebook.com/gracepoint.boston/">Facebook</a></li>
+    <li>Follow us on <a href="https://www.instagram.com/gracepoint.boston">Instagram</a></li>
+    <li>Check out our <a href="/">Gracepoint Boston website</a></li>
+  </ul>
+</div></div></div></div>

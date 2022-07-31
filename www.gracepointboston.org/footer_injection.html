@@ -122,15 +122,15 @@ function initSite() {
     let screenWidth = $(window).width();
     let curHeight = $(window).scrollTop() + screenHeight;
 
-    let lifeTop = $("#easter-life").parent().parent().next().offset().top;
-    let deathTop = $("#easter-death").parent().parent().next().offset().top;
-    let resurrectionTop = $("#easter-resurrection").parent().parent().next().offset().top;
-    let lifeHeight = $("#easter-life").parent().parent().next().outerHeight(true);
-    let deathHeight = $("#easter-death").parent().parent().next().outerHeight(true);
-    let resurrectionHeight = $("#easter-resurrection").parent().parent().next().outerHeight(true);
-    let startLife = lifeTop + lifeHeight / 2;
-    let startDeath = deathTop + deathHeight / 2;
-    let startResurrection = resurrectionTop + resurrectionHeight / 2;
+    let lifeTop = $("#easter-life").parent().parent().offset().top;
+    let deathTop = $("#easter-death").parent().parent().offset().top;
+    let resurrectionTop = $("#easter-resurrection").parent().parent().offset().top;
+    let lifeHeight = $("#easter-life").parent().parent().outerHeight(true);
+    let deathHeight = $("#easter-death").parent().parent().outerHeight(true);
+    let resurrectionHeight = $("#easter-resurrection").parent().parent().outerHeight(true);
+    let startLife = lifeTop + lifeHeight / 2 + 100;
+    let startDeath = deathTop + deathHeight / 2 + 100;
+    let startResurrection = resurrectionTop + resurrectionHeight / 2 + 100;
     if (curHeight < startDeath) {
       if (screenWidth < 850) {
         $("#easter-content").css("background-position", "top");
@@ -166,7 +166,9 @@ function initSite() {
       });
       adjustNavbarOnScroll();
       adjustSocialMediaBlocksOnScroll();
-      easterBackgroundScrollSpy();
+      if (url == "easter") { // Home Page
+        easterBackgroundScrollSpy();
+      }
     } else {
       navBar.addClass("filled-in");
       $(".Content-outer").css("margin-top", "75px");
@@ -190,6 +192,8 @@ function initSite() {
     console.log(summary[0]);
     let slideWidth = parseInt(summary.find(".sqs-gallery-design-carousel-slide").first().css("margin-right").replace("px", "")) + summary.find(".sqs-gallery-design-carousel-slide").first().width();
     let itemsPerPage = Math.floor(summary.find(".sqs-gallery-design-carousel").width() / slideWidth);
+    console.log(slideWidth);
+    console.log(itemsPerPage);
     let curPos = summary.find(".summary-item-list.sqs-gallery-design-carousel").scrollLeft() - 10;
     let newPos = Math.floor(((curPos / slideWidth) / itemsPerPage).toFixed(3)) * itemsPerPage * slideWidth;
     summary.find(".summary-item-list.sqs-gallery-design-carousel").animate({scrollLeft: newPos }, 400);
@@ -222,6 +226,15 @@ function initSite() {
       $("#passion-week .summary-block-wrapper").css("bottom", "-1000px");
     });
     $(".summary-thumbnail-outer-container a").removeAttr("href");
+    $(".sqs-gallery-meta-container a.summary-title-link").removeAttr("href");
+    if ($(window).width() <= 640) { // If not mobile (on desktop)
+      $(window).scroll(function() {
+        if (url == "easter") { // Home Page
+          easterBackgroundScrollSpy();
+        }
+        easterBackgroundScrollSpy();
+      });
+    }
   }
 
 }

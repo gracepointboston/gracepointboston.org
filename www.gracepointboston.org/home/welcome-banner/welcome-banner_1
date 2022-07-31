@@ -10,6 +10,8 @@
 }
 .thin-title-line {
   line-height: 0.8em;
+  font-size: 60px !important;
+  margin: 0px;
 }
 .homepage-title-underline {
   max-width: 39em !important;
@@ -50,6 +52,7 @@
   }
   .thin-title-line {
     line-height: 0.4em;
+    font-size: 60px !important;
   }
   .homepage-title-underline {
     max-width: 21em !important;
@@ -58,7 +61,7 @@
 </style>
 <div class="header-banner-top-spacing"></div>
 <center class="header-banner">
-  <h1 class="thin-title-line">Welcome to</h1>
+  <h2 class="thin-title-line">Welcome to</h2>
   <h1>Gracepoint Boston</h1>
 </center>
 <br>
