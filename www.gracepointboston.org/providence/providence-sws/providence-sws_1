@@ -1,0 +1,84 @@
+<style>
+  :root {
+    --subnav-bg-color: #690000;
+    --subnav-item-hover-color: #440000;
+  }
+
+  .subnavigation-container {
+    display: block;
+    position: relative;
+    margin-top: -92px;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--subnav-bg-color);
+    z-index: 999;
+  }
+	
+  .subnavigation {
+    max-width: 1040px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .subnavigation li a {
+    font-size: 15px;
+    display: block;
+    padding: 20px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.5px;
+    transition: background-color .3s 0s ease-in-out;
+  }
+  
+  .subnavigation li a:hover {
+    background-color: var(--subnav-item-hover-color);
+  }
+  
+  .subnav_button {
+    padding: 8px 25px !important;
+    margin: 10px 0;
+    border-radius: 300px;
+    color: white;
+    border: solid 1px white;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+  }
+  
+  .subnav_button:hover {
+    color: var(--subnav-bg-color);
+    background-color: white !important;
+  }
+  
+  @media screen and (max-width: 640px) {
+    .subnavigation-container {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 1030px) {
+    .subnavigation {
+      max-width: 640px;
+    }
+  }
+</style>
+
+<div class="subnavigation-container">
+  <ul class="subnavigation">
+    <li>
+      <a href="#providence-sws">Sunday Service</a>
+    </li>
+    <li>
+      <a href="#what-is-gracepoint-providence">About Us</a>
+    </li>
+    <li>
+      <a class="subnav_button" href="#get-connected-at-gracepoint-providence">Get In Touch</a>
+    </li>
+  </ul>
+</div>
+<script>
+ console.log("test"); 
+</script>

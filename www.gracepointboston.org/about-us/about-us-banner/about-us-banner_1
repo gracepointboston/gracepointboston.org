@@ -1,11 +1,14 @@
 <style>
   #about-us-banner {
-    background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1630981427078-MC1PPDE3IIDF1U7KDC8Z/meet_the_staff_team.jpg?format=2500w");
+    background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1661234757779-WNFU1CY1AJT505BQJGSN/About+%282%29.jpg?format=2500w");
     background-size: cover;
     background-position: center;
   }
   #about-us-banner h1 {
     color: white;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
   }
   #about-us-banner
   .sqs-block-button-element--medium {

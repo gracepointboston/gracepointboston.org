@@ -1,6 +1,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://static1.squarespace.com/static/61155c2fb2bbd80f6edb2541/t/613241b7b82a2a1f1e852d34/1630683575498/parallax.min.js"></script>
 
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11014781146"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-11014781146'); </script>
+
 <script>
 function initSite() {
   function initInstagramBlocks() {
@@ -12,13 +15,12 @@ function initSite() {
     }
   }
 
+  var url = window.location.href;
+  url = url.replace(/.*gracepointboston.org\/?/, "");
+  url = url.replace(/.*gracepointboston.squarespace.com\/?/, "");
+  url = url.replace(/^home\/?/, "");
+  url = url.replace(/#.*$/, "");
   if (document.readyState === 'complete') {
-    var url = window.location.href;
-    url = url.replace(/.*gracepointboston.org\/?/, "");
-    url = url.replace(/.*gracepointboston.squarespace.com\/?/, "");
-    url = url.replace(/^home\/?/, "");
-    url = url.replace(/#.*$/, "");
-
     //////////////////////////////////////////////////////////
     // CUSTOM-1: Random Youtube video!
     //////////////////////////////////////////////////////////
@@ -47,6 +49,7 @@ function initSite() {
             let dropdown = this.parentElement.parentElement;
             let blurbDiv = dropdown.parentElement.parentElement.parentElement.parentElement;
             let rowDiv = blurbDiv.parentElement.parentElement.parentElement;
+/*
             let campuses = rowDiv.nextSibling.getElementsByClassName("summary-item");
             for (let campusIndex = 0; campusIndex < campuses.length; campusIndex += 1) {
               let campus = campuses[campusIndex];
@@ -65,12 +68,13 @@ function initSite() {
                 campus.style.backgroundColor = "white"
               }
             }
+*/
           }
         });
       }
     }
     //////////////////////////////////////////////////////////
-    // CUSTOM-6: Fixing the instagram blocks
+    // CUSTOM-3: Fixing the instagram blocks
     //////////////////////////////////////////////////////////
     if (url == "") { // Home Page
       initInstagramBlocks();
@@ -79,14 +83,14 @@ function initSite() {
   }
   
   //////////////////////////////////////////////////////////
-  // Fix the navigation folder links
+  // CUSTOM-4: Navigation folder links should open new tabs
   //////////////////////////////////////////////////////////
   $('.Header-nav-folder-title[href="/navigation-resources"]').attr("target", "_blank");
   $('.Header-nav-folder-title[href="/navigation-resources"]').attr("href", "https://www.gracepointonline.org/gp-resources");
   $('.Header-nav-folder-title[href="/navigation-stories"]').attr("href", "stories");
   
   //////////////////////////////////////////////////////////
-  // Make top bar adjust to scrolling
+  // CUSTOM-5: Make top bar adjust to scrolling
   //////////////////////////////////////////////////////////
   function adjustNavbarOnScroll() {
     var headerLimit = topSection.height() + $(".sqs-announcement-bar").height() - navBar.height() - 10;
@@ -107,6 +111,10 @@ function initSite() {
       }
     }
   }
+
+  //////////////////////////////////////////////////////////
+  // CUSTOM-6: Make social media blocks adjust to scrolling
+  //////////////////////////////////////////////////////////
   function adjustSocialMediaBlocksOnScroll() {
     let screenBottom = $(window).scrollTop() + $(window).height();
     let stickHeight = $(".Footer-middle .sqs-layout").offset().top + 20 + 2 + 5 + $(".sqs-svg-icon--list").height() + 2 + 20; // Bottom of the screen must equal TOP of the sqs-layout + padding at the top of the sqs-layout (20px) + border above social media buttons + padding above the social media buttons + height of the social media buttons + border below social media buttons + margin below social media buttons
@@ -117,6 +125,9 @@ function initSite() {
     }
   }
 
+  //////////////////////////////////////////////////////////
+  // EASTER-1 - Customize Good Friday / Easter Page
+  //////////////////////////////////////////////////////////
   function easterBackgroundScrollSpy() {
     let screenHeight = $(window).height();
     let screenWidth = $(window).width();
@@ -180,7 +191,7 @@ function initSite() {
   }
   
   //////////////////////////////////////////////////////////
-  // CUSTOM-4: Summary block arrows should properly page items
+  // CUSTOM-7: Summary block arrows should properly page items
   //////////////////////////////////////////////////////////
   summaryControls = $(".sqs-gallery-controls").children();
   for (let controlIndex = 0; controlIndex < summaryControls.length; controlIndex += 1) {
@@ -189,36 +200,34 @@ function initSite() {
   }
   $(".summary-carousel-pager-prev").on("click", function(e) {
     let summary = $(this).parent().parent().parent().parent().parent().parent();
-    console.log(summary[0]);
     let slideWidth = parseInt(summary.find(".sqs-gallery-design-carousel-slide").first().css("margin-right").replace("px", "")) + summary.find(".sqs-gallery-design-carousel-slide").first().width();
     let itemsPerPage = Math.floor(summary.find(".sqs-gallery-design-carousel").width() / slideWidth);
-    console.log(slideWidth);
-    console.log(itemsPerPage);
     let curPos = summary.find(".summary-item-list.sqs-gallery-design-carousel").scrollLeft() - 10;
     let newPos = Math.floor(((curPos / slideWidth) / itemsPerPage).toFixed(3)) * itemsPerPage * slideWidth;
     summary.find(".summary-item-list.sqs-gallery-design-carousel").animate({scrollLeft: newPos }, 400);
   });
   $(".summary-carousel-pager-next").on("click", function(e) {
     let summary = $(this).parent().parent().parent().parent().parent().parent();
-    console.log(summary[0]);
     let slideWidth = parseInt(summary.find(".sqs-gallery-design-carousel-slide").first().css("margin-right").replace("px", "")) + summary.find(".sqs-gallery-design-carousel-slide").first().width();
     let itemsPerPage = Math.floor(summary.find(".sqs-gallery-design-carousel").width() / slideWidth);
-    console.log(Math.floor(summary.find(".sqs-gallery-design-carousel").width()));
-    console.log(slideWidth);
     let curPos = summary.find(".summary-item-list.sqs-gallery-design-carousel").scrollLeft() + 10;
     let newPos = (Math.floor(((curPos / slideWidth) / itemsPerPage).toFixed(2)) + 1) * itemsPerPage * slideWidth;
     summary.find(".summary-item-list.sqs-gallery-design-carousel").animate({scrollLeft: newPos }, 400);
   });
-  
-  //////////////////////////////////////////////////////////
-  // CUSTOM-5: Set background for the whole website
-  //////////////////////////////////////////////////////////
-  $(".Site.loaded").parallax({imageSrc: "https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1630646933476-84R93Q1HLMN9S7QLB17A/image-asset.jpeg", position: "0px 0px", speed: 0.4});
 
   //////////////////////////////////////////////////////////
-  // EASTER Page
+  // CUSTOM-8: Set background for the whole website
   //////////////////////////////////////////////////////////
-  if (url == "easter") { // Home Page
+  if (url == "providence-connect") {
+	  $(".Site.loaded").parallax({imageSrc: "https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1630674945501-KR4E6OSDZWC4TNNMR5TJ/Boston_Horizon.jpeg", position: "0px 0px", speed: 0.4});
+  } else {
+	  $(".Site.loaded").parallax({imageSrc: "https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1630646933476-84R93Q1HLMN9S7QLB17A/image-asset.jpeg", position: "0px 0px", speed: 0.4});
+  }
+
+  //////////////////////////////////////////////////////////
+  // EASTER-2: Customize Scrollspy and popup widget for page
+  //////////////////////////////////////////////////////////
+  if (url == "easter") {
     $(".close-button-container").on("click", function() {
       $("#passion-week .close-button-container").css("transition", "1.3s");
       $("#passion-week .close-button-container").addClass("filled-in");
@@ -236,11 +245,49 @@ function initSite() {
       });
     }
   }
+  
+  //////////////////////////////////////////////////////////
+  // PROVIDENCE-1
+  //////////////////////////////////////////////////////////
+  if (url.startsWith("providence")) {
+    $(".Mobile-bar-branding img").prop("src", "https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1661563189777-Y26EHXX85U5QS56LQWXZ/GPProvidence_Logo.png?format=1000w");
+    $(".Header-branding img").prop("src", "https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1661563189777-Y26EHXX85U5QS56LQWXZ/GPProvidence_Logo.png?format=1000w");
+    $(".Mobile-bar-branding img").prop("src", "https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1661563189777-Y26EHXX85U5QS56LQWXZ/GPProvidence_Logo.png?format=1000w");
+    $(".Header-branding").prop("href", "/providence");
+    $(".Mobile-bar-branding").prop("href", "/providence");
+    $(".Header-nav--secondary a").prop("href", "/providence-connect");
+    $(".Mobile-overlay-nav--secondary a").prop("href", "/providence-connect");
+    $(".Footer .sqs-svg-icon--list .instagram-unauth").prop("href", "https://www.instagram.com/gp.providence/");
+    $(".gp_logo").prop("src", "https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1662254105318-K79DVRLEQSOQHF9ZSBOU/gracepoint_logo_white.png?format=1000w");
+    $(".send_network_logo").prop("src", "https://images.squarespace-cdn.com/content/v1/528d9e1ce4b04fc308327f74/f1bba0f8-0cf0-477e-a7c1-4f1d82e44813/sendnetwork-logo-white.png?format=500w");
+  }
+  if (url == "providence-connect") {
+    $(".sqs-block-summary-v2 a").each(function() {
+      if ($(this).prop("href") == "https://www.gracepointboston.org/gpprovidence-connect-gallery/devotions") {
+        $(this).removeAttr("href");
+      } else if ($(this).prop("href") == "https://www.gracepointboston.org/gpprovidence-connect-gallery/project-build") {
+        $(this).removeAttr("href");
+      } else if ($(this).prop("href") == "https://www.gracepointboston.org/gpprovidence-connect-gallery/wellness-wednesdays") {
+        $(this).removeAttr("href");
+      }
+    });
+    $(".field.checkbox").find("input[type=checkbox]").change(function() {
+      if ($(this).prop("value").includes("Course 101")) {
+        let checkBoxValue = $(this).prop("value");
+        if ($(this).is(':checked')) {
+          $(".field.radio").css("display", "block");
+        } else {
+          $(".field.radio").css("display", "none");
+        }
+      }
+    });
+  }
+
 
 }
   
    //////////////////////////////////////////////////////////
-  // CUSTOM-6: make footer middle inline
+  // CUSTOM-9: make footer middle inline
   //////////////////////////////////////////////////////////
   $(".socialaccountlinks-v2-block").css("display", "inline-block")
   
@@ -249,4 +296,7 @@ document.onreadystatechange = () => {
   initSite();
 };
   
-</script>
+</script><script data-sqs-type="imageloader-bootstrapper">if(window.ImageLoader) window.ImageLoader.bootstrap({}, document);</script><script>Squarespace.afterBodyLoad(Y);</script><svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none" data-usage="social-icons-svg"><symbol id="youtube-unauth-icon" viewBox="0 0 64 64"><path d="M46.7,26c0,0-0.3-2.1-1.2-3c-1.1-1.2-2.4-1.2-3-1.3C38.3,21.4,32,21.4,32,21.4h0 c0,0-6.3,0-10.5,0.3c-0.6,0.1-1.9,0.1-3,1.3c-0.9,0.9-1.2,3-1.2,3S17,28.4,17,30.9v2.3c0,2.4,0.3,4.9,0.3,4.9s0.3,2.1,1.2,3 c1.1,1.2,2.6,1.2,3.3,1.3c2.4,0.2,10.2,0.3,10.2,0.3s6.3,0,10.5-0.3c0.6-0.1,1.9-0.1,3-1.3c0.9-0.9,1.2-3,1.2-3s0.3-2.4,0.3-4.9 v-2.3C47,28.4,46.7,26,46.7,26z M28.9,35.9l0-8.4l8.1,4.2L28.9,35.9z"/></symbol><symbol id="youtube-unauth-mask" viewBox="0 0 64 64"><path d="M0,0v64h64V0H0z M47,33.1c0,2.4-0.3,4.9-0.3,4.9s-0.3,2.1-1.2,3c-1.1,1.2-2.4,1.2-3,1.3 C38.3,42.5,32,42.6,32,42.6s-7.8-0.1-10.2-0.3c-0.7-0.1-2.2-0.1-3.3-1.3c-0.9-0.9-1.2-3-1.2-3S17,35.6,17,33.1v-2.3 c0-2.4,0.3-4.9,0.3-4.9s0.3-2.1,1.2-3c1.1-1.2,2.4-1.2,3-1.3c4.2-0.3,10.5-0.3,10.5-0.3h0c0,0,6.3,0,10.5,0.3c0.6,0.1,1.9,0.1,3,1.3 c0.9,0.9,1.2,3,1.2,3s0.3,2.4,0.3,4.9V33.1z M28.9,35.9l8.1-4.2l-8.1-4.2L28.9,35.9z"/></symbol><symbol id="facebook-unauth-icon" viewBox="0 0 64 64"><path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"/></symbol><symbol id="facebook-unauth-mask" viewBox="0 0 64 64"><path d="M0,0v64h64V0H0z M39.6,22l-2.8,0c-2.2,0-2.6,1.1-2.6,2.6V28h5.3l-0.7,5.3h-4.6V47h-5.5V33.3H24V28h4.6V24 c0-4.6,2.8-7,6.9-7c2,0,3.6,0.1,4.1,0.2V22z"/></symbol><symbol id="instagram-unauth-icon" viewBox="0 0 64 64"><path d="M46.91,25.816c-0.073-1.597-0.326-2.687-0.697-3.641c-0.383-0.986-0.896-1.823-1.73-2.657c-0.834-0.834-1.67-1.347-2.657-1.73c-0.954-0.371-2.045-0.624-3.641-0.697C36.585,17.017,36.074,17,32,17s-4.585,0.017-6.184,0.09c-1.597,0.073-2.687,0.326-3.641,0.697c-0.986,0.383-1.823,0.896-2.657,1.73c-0.834,0.834-1.347,1.67-1.73,2.657c-0.371,0.954-0.624,2.045-0.697,3.641C17.017,27.415,17,27.926,17,32c0,4.074,0.017,4.585,0.09,6.184c0.073,1.597,0.326,2.687,0.697,3.641c0.383,0.986,0.896,1.823,1.73,2.657c0.834,0.834,1.67,1.347,2.657,1.73c0.954,0.371,2.045,0.624,3.641,0.697C27.415,46.983,27.926,47,32,47s4.585-0.017,6.184-0.09c1.597-0.073,2.687-0.326,3.641-0.697c0.986-0.383,1.823-0.896,2.657-1.73c0.834-0.834,1.347-1.67,1.73-2.657c0.371-0.954,0.624-2.045,0.697-3.641C46.983,36.585,47,36.074,47,32S46.983,27.415,46.91,25.816z M44.21,38.061c-0.067,1.462-0.311,2.257-0.516,2.785c-0.272,0.7-0.597,1.2-1.122,1.725c-0.525,0.525-1.025,0.85-1.725,1.122c-0.529,0.205-1.323,0.45-2.785,0.516c-1.581,0.072-2.056,0.087-6.061,0.087s-4.48-0.015-6.061-0.087c-1.462-0.067-2.257-0.311-2.785-0.516c-0.7-0.272-1.2-0.597-1.725-1.122c-0.525-0.525-0.85-1.025-1.122-1.725c-0.205-0.529-0.45-1.323-0.516-2.785c-0.072-1.582-0.087-2.056-0.087-6.061s0.015-4.48,0.087-6.061c0.067-1.462,0.311-2.257,0.516-2.785c0.272-0.7,0.597-1.2,1.122-1.725c0.525-0.525,1.025-0.85,1.725-1.122c0.529-0.205,1.323-0.45,2.785-0.516c1.582-0.072,2.056-0.087,6.061-0.087s4.48,0.015,6.061,0.087c1.462,0.067,2.257,0.311,2.785,0.516c0.7,0.272,1.2,0.597,1.725,1.122c0.525,0.525,0.85,1.025,1.122,1.725c0.205,0.529,0.45,1.323,0.516,2.785c0.072,1.582,0.087,2.056,0.087,6.061S44.282,36.48,44.21,38.061z M32,24.297c-4.254,0-7.703,3.449-7.703,7.703c0,4.254,3.449,7.703,7.703,7.703c4.254,0,7.703-3.449,7.703-7.703C39.703,27.746,36.254,24.297,32,24.297z M32,37c-2.761,0-5-2.239-5-5c0-2.761,2.239-5,5-5s5,2.239,5,5C37,34.761,34.761,37,32,37z M40.007,22.193c-0.994,0-1.8,0.806-1.8,1.8c0,0.994,0.806,1.8,1.8,1.8c0.994,0,1.8-0.806,1.8-1.8C41.807,22.999,41.001,22.193,40.007,22.193z"/></symbol><symbol id="instagram-unauth-mask" viewBox="0 0 64 64"><path d="M43.693,23.153c-0.272-0.7-0.597-1.2-1.122-1.725c-0.525-0.525-1.025-0.85-1.725-1.122c-0.529-0.205-1.323-0.45-2.785-0.517c-1.582-0.072-2.056-0.087-6.061-0.087s-4.48,0.015-6.061,0.087c-1.462,0.067-2.257,0.311-2.785,0.517c-0.7,0.272-1.2,0.597-1.725,1.122c-0.525,0.525-0.85,1.025-1.122,1.725c-0.205,0.529-0.45,1.323-0.516,2.785c-0.072,1.582-0.087,2.056-0.087,6.061s0.015,4.48,0.087,6.061c0.067,1.462,0.311,2.257,0.516,2.785c0.272,0.7,0.597,1.2,1.122,1.725s1.025,0.85,1.725,1.122c0.529,0.205,1.323,0.45,2.785,0.516c1.581,0.072,2.056,0.087,6.061,0.087s4.48-0.015,6.061-0.087c1.462-0.067,2.257-0.311,2.785-0.516c0.7-0.272,1.2-0.597,1.725-1.122s0.85-1.025,1.122-1.725c0.205-0.529,0.45-1.323,0.516-2.785c0.072-1.582,0.087-2.056,0.087-6.061s-0.015-4.48-0.087-6.061C44.143,24.476,43.899,23.682,43.693,23.153z M32,39.703c-4.254,0-7.703-3.449-7.703-7.703s3.449-7.703,7.703-7.703s7.703,3.449,7.703,7.703S36.254,39.703,32,39.703z M40.007,25.793c-0.994,0-1.8-0.806-1.8-1.8c0-0.994,0.806-1.8,1.8-1.8c0.994,0,1.8,0.806,1.8,1.8C41.807,24.987,41.001,25.793,40.007,25.793z M0,0v64h64V0H0z M46.91,38.184c-0.073,1.597-0.326,2.687-0.697,3.641c-0.383,0.986-0.896,1.823-1.73,2.657c-0.834,0.834-1.67,1.347-2.657,1.73c-0.954,0.371-2.044,0.624-3.641,0.697C36.585,46.983,36.074,47,32,47s-4.585-0.017-6.184-0.09c-1.597-0.073-2.687-0.326-3.641-0.697c-0.986-0.383-1.823-0.896-2.657-1.73c-0.834-0.834-1.347-1.67-1.73-2.657c-0.371-0.954-0.624-2.044-0.697-3.641C17.017,36.585,17,36.074,17,32c0-4.074,0.017-4.585,0.09-6.185c0.073-1.597,0.326-2.687,0.697-3.641c0.383-0.986,0.896-1.823,1.73-2.657c0.834-0.834,1.67-1.347,2.657-1.73c0.954-0.371,2.045-0.624,3.641-0.697C27.415,17.017,27.926,17,32,17s4.585,0.017,6.184,0.09c1.597,0.073,2.687,0.326,3.641,0.697c0.986,0.383,1.823,0.896,2.657,1.73c0.834,0.834,1.347,1.67,1.73,2.657c0.371,0.954,0.624,2.044,0.697,3.641C46.983,27.415,47,27.926,47,32C47,36.074,46.983,36.585,46.91,38.184z M32,27c-2.761,0-5,2.239-5,5s2.239,5,5,5s5-2.239,5-5S34.761,27,32,27z"/></symbol><symbol id="flickr-unauth-icon" viewBox="0 0 64 64"><path d="M32,16c-8.8,0-16,7.2-16,16s7.2,16,16,16s16-7.2,16-16S40.8,16,32,16z M26,37c-2.8,0-5-2.2-5-5 s2.2-5,5-5s5,2.2,5,5S28.8,37,26,37z M38,37c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5S40.8,37,38,37z"/></symbol><symbol id="flickr-unauth-mask" viewBox="0 0 64 64"><path d="M38,27c-2.8,0-5,2.2-5,5s2.2,5,5,5s5-2.2,5-5S40.8,27,38,27z M0,0v64h64V0H0z M32,48c-8.8,0-16-7.2-16-16 s7.2-16,16-16s16,7.2,16,16S40.8,48,32,48z M26,27c-2.8,0-5,2.2-5,5s2.2,5,5,5s5-2.2,5-5S28.8,27,26,27z"/></symbol></svg>
+
+  </body>
+</html>

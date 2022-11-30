@@ -1,0 +1,38 @@
+<style>
+  .portrait {
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+
+    float: left;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+  .portrait-description {
+    padding-top: 15px;
+  }
+
+  .gracepoint-boston-links {
+    margin-top: 50px;
+  }
+  .gracepoint-boston-links a {
+    color: #ffaa00;
+  }
+</style>
+<img class="portrait" src="https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1635395451469-VILVX7OU9S5BEK3WQJQ5/JoshChao.jpg?format=200w" alt="Josh Chao is one of the college blogging staff writers with Gracepoint Boston">
+<div class="portrait-description">
+Josh Chao graduated in 2021 from the University of North Carolina at Chapel Hill with a major in biology and minors in Spanish for the professions and Chinese. Afterwards, he moved to Cambridge, MA, where he's currently a mentor for students at Boston University and Brandeis University. He enjoys food, music, and reading (when he can find the time)!
+</div>
+
+<div class="gracepoint-boston-links">
+  <h3>
+    Want to see more from Gracepoint Boston?
+  </h3>
+  <ul>
+    <li><a href="https://www.gracepointboston.org/blog-posts">More blog posts!</a></li>
+    <li>Like us on <a href="https://www.facebook.com/gracepoint.boston/">Facebook</a></li>
+    <li>Follow us on <a href="https://www.instagram.com/gracepoint.boston">Instagram</a></li>
+    <li>Check out our <a href="/">Gracepoint Boston website</a></li>
+  </ul>
+</div></div></div></div>

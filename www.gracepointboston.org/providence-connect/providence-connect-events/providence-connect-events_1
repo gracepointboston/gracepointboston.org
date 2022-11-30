@@ -1,0 +1,60 @@
+<style>
+  #providence-connect-events .Index-page-content {
+    padding-top: 0px;
+  }
+  #providence-connect-events .sqs-col-12 {
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 5px;
+  }
+  #providence-connect-events .sqs-block-html {
+    padding-top: 20px;
+    padding-left: 83px;
+    padding-bottom: 0px;
+  }
+  #providence-connect-events .sqs-gallery-design-carousel .sqs-gallery-controls .previous, .sqs-gallery-design-carousel .sqs-gallery-controls .next {
+    margin-top: 10em;
+  }
+  #providence-connect-events .sqs-gallery-design-carousel .sqs-gallery-controls .previous {
+    margin-right: calc(100% - 90px);
+  }
+
+  #providence-connect-events .sqs-block-summary-v2 {
+    padding-top: 0px;
+  }
+  #providence-connect-events .summary-item {
+    width: calc(33% - 5px) !important;
+    margin-right: 10px;
+    margin-left: 0px;
+  }
+
+  @media only screen and (max-width: 1150px) {
+    #providence-connect-events .sqs-gallery-design-carousel .sqs-gallery-controls .previous {
+      margin-right: calc(100% - 55px);
+    }
+  }
+  @media screen and (max-width:900px) {
+    #providence-connect-events .sqs-block-html {
+      padding-left: 67px;
+    }
+    #providence-connect-events .sqs-block-code {
+      padding: 0px;
+    }
+    #providence-connect-events .summary-item {
+      width: calc(50% - 5px) !important;
+    }
+  }
+  @media screen and (max-width:640px) {
+    #providence-connect-events .Index-page-content {
+      padding: 0px;
+    }
+    #providence-connect-events .sqs-block-html {
+      padding-left: 20px;
+    }
+    #providence-connect-events .sqs-gallery-design-carousel .sqs-gallery-controls .next {
+      margin-right: 10px;
+    }
+    #providence-connect-events .summary-item {
+      width: calc(100% - 5px) !important;
+    }
+  }
+</style></style>

@@ -1,0 +1,19 @@
+<style>
+  #church-for-college-students span {
+    color: black;
+  }
+
+  @media only screen and (min-width: 640px) {   
+    #church-for-college-students  {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {   
+    #church-for-college-students  .sqs-block-code{
+      padding: 0;
+    }
+  }
+
+</style></style>

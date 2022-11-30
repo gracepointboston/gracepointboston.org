@@ -1,0 +1,34 @@
+<style>
+  #welcome-to-gracepoint-providence {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1661563230457-LL8HCND5HPJ3TK54REM1/providence_capitol.jpeg?format=2500w");
+    background-size: cover;
+    background-position: center;
+  }
+  #welcome-to-gracepoint-providence h1 {
+    color: white;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #welcome-to-gracepoint-providence .sqs-block-button-element--medium {
+    background-color: #386a6d;
+    border: none;
+  }
+  #welcome-to-gracepoint-providence .sqs-block-button-element--medium:hover {
+    background-color: #FFFFFF;
+  }
+  #welcome-to-gracepoint-providence {
+    color: #fff;
+  }
+  
+  /* Poster Card Hover-overlays */
+  #welcome-to-gracepoint-providence .image-overlay {
+    background: rgba(0,0,0,0.1);
+    transition: 0.3s background;
+    -webkit-transition: 0.3s background;
+    -moz-transition: 0.3s background;
+  }
+  #welcome-to-gracepoint-providence .image-overlay:hover {
+    background: rgba(0,0,0,0.4);
+  }
+</style></style>

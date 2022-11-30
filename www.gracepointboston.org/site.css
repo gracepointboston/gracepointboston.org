@@ -34,6 +34,21 @@ h5 {
 .Index-page, .Main--page, .Main--blog-item, .Footer {
   background: unset;
 }
+.sqs-block-accordion .accordion-item__description a {
+  border: 1px solid #0b3832;
+  background: #0b3832;
+  color: #fff;
+  padding: 13px 26px;
+  border-radius: 3px;
+  font-family: rubik;
+  font-size: 12px;
+  letter-spacing: .15em;
+  margin-top: 15px;
+}
+.sqs-block-accordion .accordion-item__description a:hover {
+  opacity: .85;
+  color: #fff;
+}
 body: not(.sqs-seven-one) .sqs-announcement-bar {
   background-color: #183936;
 }
@@ -178,7 +193,7 @@ body: not(.sqs-seven-one) .sqs-announcement-bar {
 }
 .Footer-blocks--middle .sqs-svg-icon--list {
   height: 42px;
-  width: 135px;
+  width: 180px;
   background-color: #fff;
   border: 2px solid #eee;
   padding: 5px 6px 0px 0px;

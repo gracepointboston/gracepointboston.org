@@ -1,0 +1,14 @@
+<style>
+  .covid-update {
+    font-style: italic;
+    font-size: 14px;
+    padding-top: 0px;
+    line-height: 0.9em;
+  }
+  .covid-update a {
+    color: #3d9991;
+  }
+</style>
+<span class="covid-update">
+  * <strong>COVID-19 Update:</strong> We are actively monitoring the COVID-19 situation and following all local restrictions. <a href="/coronavirus">Click here for more information</a>.
+</span>

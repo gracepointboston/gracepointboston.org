@@ -1,0 +1,11 @@
+<style>
+  #gpboston-blog {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1630981427078-MC1PPDE3IIDF1U7KDC8Z/meet_the_staff_team.jpg?format=2500w");
+    background-size: cover;
+    background-position: center;
+  }
+
+  #gpboston-blog h1 {
+    color: white;
+  }
+</style></style>

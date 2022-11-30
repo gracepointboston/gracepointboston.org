@@ -1,0 +1,53 @@
+<style>
+/*
+  #providence-connect-banner {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1649367787342-FFFD3PUGKFAANM8LVRAL/connect_with_us.jpg?format=2000w");
+    background-size: cover;
+    background-position: 75% 70%;
+  }
+*/
+  #providence-connect-banner .Index-page-content {
+    padding-bottom: 0px;
+  }
+  #providence-connect-banner h1 {
+    color: white;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+  }
+  #providence-connect-banner h3 {
+    color: white;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+  }
+  #providence-connect-banner .sqs-block-button-element--medium {
+    background-color: #386a6d;
+    border: none;
+  }
+  #providence-connect-banner .sqs-block-button-element--medium:hover {
+    background-color: #FFFFFF;
+  }
+  #providence-connect-banner {
+    color: #fff;
+  }
+  
+  /* Poster Card Hover-overlays */
+  #providence-connect-banner .image-overlay {
+    background: rgba(0,0,0,0.1);
+    transition: 0.3s background;
+    -webkit-transition: 0.3s background;
+    -moz-transition: 0.3s background;
+  }
+  #providence-connect-banner .image-overlay:hover {
+    background: rgba(0,0,0,0.4);
+  }
+
+  @media only screen and (max-width: 640px) {
+    #providence-connect-banner .sqs-block-spacer {
+      display: none;
+    }
+  }
+</style></style>

@@ -1,5 +1,13 @@
 <style>
-#covocational {
-  padding-top: 30px;
-}
+  #covocational {
+    margin-top: -30px;
+  }
+
+  #covocational .sqs-block.video-block {
+    margin-left: .5ch;
+  }
+
+  #covocational .video-caption {
+    display: none;
+  }
 </style></style>

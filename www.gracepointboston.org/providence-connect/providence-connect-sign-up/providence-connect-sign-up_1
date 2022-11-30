@@ -1,0 +1,71 @@
+<style>
+  #providence-connect-sign-up .page-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #providence-connect-sign-up .sqs-col-12 {
+    margin-bottom: 50px;
+    padding: 0px 50px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 5px;
+  }
+  body:not(.button-style-default).button-style-outline .sqs-editable-button {
+    color: white;
+    border-color: #690000;
+    background-color: #690000;
+  }
+  body:not(.button-style-default).button-style-outline .sqs-editable-button:hover {
+    color: white;
+    border-color: #440000;
+    background-color: #440000;
+  }
+  .form-wrapper .field-list .field .option {
+    font-size: 16px;
+  }
+  #providence-connect-sign-up .field.radio {
+    display: none;
+  }
+
+/* Form rearrange */ 
+@media screen and (min-width: 800px) {
+  .form-item.fields.name {
+  	padding-left: 1%;
+  	padding-right: 5%;
+  	float: left;
+  	width: 50%;
+  }
+  .form-item.field.email {
+    float: left;
+  	width: 49%;
+  	padding-right: 5%;
+  }
+  .form-item.field.select {
+    float: left;
+  	width: 49%;
+  }
+  .form-item.field.textarea {
+    margin-top: 110px;
+  }
+}
+
+#providence-connect-sign-up .sqs-system-button {
+  border-radius: 0.3em;
+  transition: 0.5s
+}
+
+  @media only screen and (max-width: 800px) {
+    #providence-connect-sign-up .sqs-block-code {
+      padding: 0px !important;
+      padding-top: 0px !important;
+    }
+    #providence-connect-sign-up .content-inner .sqs-col-12 {
+      padding: 0px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    #providence-connect-sign-up h2 {
+      font-size: 30px !important;
+    }
+  }
+
+</style>

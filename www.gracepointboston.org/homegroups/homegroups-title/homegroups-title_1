@@ -1,0 +1,25 @@
+<style>
+    #homegroups-title {
+        background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1661282636826-BZ6UVVC9FK7D7LXJCG22/homegroups_header.jpg");
+        background-size: cover;
+        background-position: center;
+        padding-top: 100px;
+    }
+
+    #homegroups-title .homegroups-intro {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        min-height: 400px;
+    }
+
+    #homegroups-title .homegroups-intro h2 {
+        color: white;
+    }
+</style>
+
+<div class="homegroups-intro">
+    <h2>Homegroups</h2>
+</div></div>
