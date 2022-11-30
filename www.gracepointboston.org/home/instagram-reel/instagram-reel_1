@@ -1,4 +1,10 @@
 <style>
+  #instagram-reel {
+      border-top: 1px;
+  }
+  #instagram-reel h3{
+      color: black;
+  }
   #instagram-reel .sqs-block-html {
     padding: 0px;
   }

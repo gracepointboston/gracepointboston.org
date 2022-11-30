@@ -1,68 +1,79 @@
 <style>
-#welcome-banner {
-  min-height: 100vh;
-}
-.header-banner-top-spacing {
-  height: calc(55vh - 250px);
-}
-.header-banner {
-  margin-bottom: 50px;
-}
-.thin-title-line {
-  line-height: 0.8em;
-  font-size: 60px !important;
-  margin: 0px;
-}
-.homepage-title-underline {
-  max-width: 39em !important;
+#welcome-banner .sqs-block-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#welcome-banner h1, #welcome-banner h3 {
+#welcome-banner .announcement {
+  position: absolute;
+  top: 0;
+  margin-top: 50px;
+  max-width: 80ch;
+}
+
+#welcome-banner h1, h3 {
   color: white;
-  margin: 0px;
+  margin: 5px;
 }
 #welcome-banner .sqs-block-code {
   padding-bottom: 0px;
 }
 
-#welcome-banner .sqs-block-button-element {
-  color: white;
-}
-#welcome-banner .sqs-block-button-element:hover {
-  color: black;
-}
-
-#welcome-banner .sqs-block-button-element--medium {
-  background-color: #386a6d;
-  border: none;
-}
-#welcome-banner .sqs-block-button-element--medium:hover {
-  background-color: #FFFFFF;
-}
+  #connect-button {
+    background-color: #4b8781;
+    color: #fff;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    transition: .5s;
+    border-radius: 3px;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 15px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin: 0 0.618em;
+    padding: 0.618em 0;
+  }
 
 @media only screen and (max-width: 640px) {
   #welcome-banner {
     background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1648167580359-XZNB41LZ6X8NGTPVNB5N/gracepoint_boston_welcome.jpeg?format=2500w");
     background-size: cover;
-    background-position: top;
-    min-height: calc(100vh - 50px);
+    background-position: center;
+    min-height: 50vh;
   }
-  .normal-title-line {
-    line-height: 1.5em;
+  #welcome-banner .sqs-block-content {
+    height: 50vh;
   }
-  .thin-title-line {
-    line-height: 0.4em;
-    font-size: 60px !important;
+  #welcome-banner h2
+}
+
+@media only screen and (min-width: 640px) {
+  #welcome-banner {
+    min-height: 100vh;
   }
-  .homepage-title-underline {
-    max-width: 21em !important;
+
+  #welcome-banner .sqs-block-content {
+    height: 100vh;
   }
 }
 </style>
 <div class="header-banner-top-spacing"></div>
+<!-- <p class="announcement">
+  Our response to the media articles is at 
+  <a href="gracepointonline.org/ctresponse">gracepointonline.org/ctresponse</a>. 
+  If you have any questions/concerns, please call Jonathan at 510-753-0675, and we will be available to speak
+  with you.
+</p> -->
 <center class="header-banner">
-  <h2 class="thin-title-line">Welcome to</h2>
-  <h1>Gracepoint Boston</h1>
+  <h1>
+    Welcome to <br>
+    Gracepoint Boston
+  </h1>
+  <b class="subtitle">29 Denby Rd Allston, MA 02134 | Sundays 11am College Service</b><br><br>
+  <a href="/connect" id="connect-button">Connect with us</a>
 </center>
 <br>
-</div></div>
+</div></div></div></div></div>

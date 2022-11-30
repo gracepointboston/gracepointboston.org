@@ -1,0 +1,19 @@
+<style>
+    #sunday-service {
+        background-image: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1661232298177-R5R4UDN5MLR6FEL9N7NM/HOMEPAGE_SUNDAY_SECTION_BACKGROUND.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 25% center;
+    }
+
+    #sunday-service .Index-page-content {
+        padding-bottom: 100px;
+    }
+
+    @media screen and (min-width: 1000px) {
+        #sunday-service h2 {
+            margin-bottom: 30px;
+        }
+    }
+
+</style></style>

@@ -1,12 +1,10 @@
 <style>
-  footer .Footer-middle .sqs-block-image {
-    padding-left: 0px;
-  }
-  .footer-blurb {
-    font-size: 14px;
-    color: #777;
+  .gp_logo {
+    width: 200px;
   }
 </style>
-<span class="footer-blurb">
-  Gracepoint is proud to be part of the <a href="https://www.namb.net/send-network/" target="_blank">SEND Network</a> and to partner with fellow church planters in our shared vision of reaching people with the gospel.
-<span></div></div><span></div></div>
+<a href="http://gracepointonline.org/">
+  <img class="gp_logo" src="https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1662254926667-DZ9BLMSG2H9XU9RYEDCW/gracepoint_logo_black.png?format=1000w" />
+</a>
+<br>
+<a href="http://gracepointonline.org/"><strong>Gracepoint Ministries</strong></a> is a network of collegiate church plants and parachurch ministries</div><a href="http://gracepointonline.org/"><strong>Gracepoint Ministries</strong></a> is a network of collegiate church plants and parachurch ministries</div>

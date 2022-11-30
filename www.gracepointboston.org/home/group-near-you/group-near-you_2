@@ -1,0 +1,53 @@
+<style>
+    .hg-about-row {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .hg-about-col {
+        margin-left: 10px;
+        margin-right: 10px;
+        max-width: 300px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hg-about-img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hg-about-text {
+        text-align: center;
+    }
+
+</style>
+
+<div class="hg-about-row">
+    <div class="hg-about-col">
+        <img class="hg-about-img" src="https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1661233613655-2AVM8GGLRWFMZGHMTAF0/eating.png" alt="homegroup making food together">
+        <div>
+            <p class="hg-about-text">
+                We usually start our times eating and cooking together. Food is part of the fellowship :)
+            </p>
+        </div>
+    </div>
+    <div class="hg-about-col">
+        <img class="hg-about-img" src="https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1661233613091-IXF5XJ53FS88MFM6S70T/bibles.png" alt="homegroup studying Bible">
+        <div>
+            <p class="hg-about-text">
+                Together, we learn about God  and answer life’s big Qs through studying the bible.
+            </p>
+        </div>
+    </div>
+    <div class="hg-about-col">
+        <img class="hg-about-img" src="https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1661233613119-ZOKYAYJONJSMJAKEUZEZ/fun.png" alt="homegroup having fun together">
+        <div>
+            <p class="hg-about-text">
+                We have fun, build friendships and make memories along the way!
+            </p>
+        </div>
+    </div>
+</div></div></div></div></div></div></div></div>
