@@ -1,0 +1,28 @@
+<style>
+   .Index #what-we-do .sqs-layout {
+    background: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1669932952318-SXY6R4L8AW3TDVIBW5T0/image-asset.jpeg?format=2500w");
+    background-size: cover;
+  }
+
+  #what-we-do .sqs-block-content {
+    margin-left: 5%;
+  }
+
+  #what-we-do .sqs-block-content p {
+    color: black;
+  }
+
+  #what-we-do .sqs-block-button a {
+    color: #0a3934;
+    border-color: #0a3934;
+    border-radius: 3px;
+    padding: 1em 2.5em;
+    font-weight: 300;
+  }
+
+  #what-we-do .sqs-block-button a:hover {
+    background-color: #0a3934;
+    color: #fff;
+  }
+  
+</style></style>

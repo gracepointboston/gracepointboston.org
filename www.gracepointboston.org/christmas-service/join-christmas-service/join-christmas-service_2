@@ -1,0 +1,46 @@
+<style>
+  /* remove unneeded */
+  .Header.Header--top {
+    background: #183432;
+    z-index: 9999;
+  }
+
+  .Index #join-christmas-service {
+    padding-top: 40px;
+    z-index: 9998;
+  }
+  
+  .Index-page-content {
+    padding: 0px;
+    max-width: 100%;
+  }
+  
+  .Index #join-christmas-service .sqs-layout {
+    background: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1669945536711-1O4OYAFUA9VKAOVFARZ0/image-asset.jpeg?format=2500w");
+    background-size: cover;
+    background-position: center;
+  }
+
+  h1, p {
+    color: white;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .sqs-block-form {
+/*     color: white; */
+  }
+
+  .button.sqs-system-button {
+    border-color: white !important;
+    color: white !important;
+  }
+
+  @media (max-width: 480px) {
+    #join-christmas-service {
+      padding-top: 0px !important;
+    }
+  }
+</style></style>
