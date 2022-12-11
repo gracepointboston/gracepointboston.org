@@ -1,0 +1,13 @@
+<style>
+  #newsletter-sign-up {
+    background-color: #F5F2EF;
+  }
+  
+  #newsletter-sign-up p {
+    color: black;
+  }
+
+  .form-inner-wrapper {
+    margin-top: 0;
+  }
+</style></style>

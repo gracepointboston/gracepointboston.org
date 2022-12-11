@@ -1,0 +1,46 @@
+<style>
+  #excited-to-meet-you-at-christmas-service p {
+    color: black;
+  }
+  
+  #excited-to-meet-you-at-christmas-service 
+  .image-caption {
+    text-align: center;
+  }
+  
+  #excited-to-meet-you-at-christmas-service 
+  .image-caption-wrapper {
+    padding-top: 20;
+  }
+
+  #rsvp {
+    position: fixed;
+    bottom: 3%;
+    left: 38%;
+    z-index: 999;
+  }
+
+  #rsvp a {
+    background-color: #fed980;
+    color: black;
+    padding: .65em 1.5em;
+    font-family: Rubik;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 24px;
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+  #rsvp {
+    display: none;
+  }
+}
+</style>
+
+<div id="rsvp">
+  <a href="#join-christmas-service">DON'T FORGET TO RSVP!</a>
+</div></div></div></div>

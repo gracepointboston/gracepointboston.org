@@ -1,0 +1,30 @@
+<style>
+  /* remove unneeded */
+
+  #looking-for-church-form {
+    padding-top: 10px;
+  }
+  
+  #looking-for-church-form {
+    background: url("https://images.squarespace-cdn.com/content/v1/61155c2fb2bbd80f6edb2541/1668651485996-KV6FY3XCWL23P9X3ZV0W/image-asset.jpg");
+    background-size: cover;
+  }
+
+  #looking-for-church-form h1, 
+  #looking-for-church-form p {
+    color: white;
+  }
+
+  #looking-for-church-form h1 {
+    margin-bottom: 20px;
+  }
+
+  #looking-for-church-form .sqs-block-form {
+    color: white;
+  }
+
+  #looking-for-church-form .button.sqs-system-button {
+    border-color: white !important;
+    color: white !important;
+  }
+</style></style>

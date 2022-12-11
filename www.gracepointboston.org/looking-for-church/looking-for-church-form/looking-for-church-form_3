@@ -1,0 +1,29 @@
+<!-- Event snippet for Get Connected Submit Button conversion page In your html page, 
+add the snippet and call gtag_report_conversion when someone clicks on the chosen link 
+or button. -->
+<script>
+    function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof (url) != 'undefined') {
+                window.location = url;
+            }
+        };
+        gtag_v2('event', 'conversion', { 'send_to': 'AW-11014781146/wGpNCPT08IAYENrxoIQp', 'event_callback': callback });
+        return false;
+    }
+
+    // Select the node that will be observed for mutations
+    const targetNode = document.querySelector('#looking-for-church-form div.form-wrapper .form-submission-text');
+    const observer = new MutationObserver((mutationList, observer) => {
+        for (const mutation of mutationList) {
+            if (mutation.attributeName == "class") {
+                if (!targetNode.classList.contains("hidden")) {
+                    gtag_report_conversion()
+                }
+            }
+        }
+    });
+
+    // Start observing the target node for configured mutations
+    observer.observe(targetNode, {subtree: true, childList: true, attributes: true});
+</script></div></script></div>
